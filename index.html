@@ -6,9 +6,16 @@
     <title>Portfolio</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .about-section, .projects-section, .skills-section, .contact-section {
+        body {
+            position: relative;
+            scroll-behavior: smooth;
+        }
+        .about-section, .projects-section, .skills-section, .contact-section, .home-section {
             text-align: center;
             padding: 50px 0;
+        }
+        .home-section {
+            padding-top: 100px; /* Adjust this value to increase or decrease space */
         }
         .about-section img {
             border-radius: 50%;
@@ -24,6 +31,13 @@
         .contact-section .contact-info {
             margin-bottom: 30px;
         }
+
+         .contact-section .contact-info img {
+             width: 50px;
+             height: 50px;
+             margin: 0 10px;
+         }
+        
         .contact-section .social-icons img {
             width: 50px;
             height: 50px;
@@ -31,18 +45,63 @@
         }
         .contact-section .social-icons p {
             margin: 0;
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
             font-size: 14px;
+        }
+        .navbar {
+            background-color: #333;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
         }
     </style>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="container">
+            <h1 class="display-4">Welcome to My Portfolio</h1>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <h2 class="display-4">About</h2>
             <img src="images/about/1.jpg" alt="About Me" class="img-fluid" width="150" height="150">
-            <p class="lead">A Seasoned Data Expert with 5+ years of experience leveraging Machine Learning and Predictive Modeling to conduct financial data analysis, specializing in converting complex datasets into actionable insights with Tableau, Power BI, and QuickSight. Proficient in Python, SQL, and Excel Macros/VBA for advanced analytics, I excel in creating predictive models using scikit-learn and TensorFlow. My work includes cloud-based data management using Azure and AWS, optimizing data workflows for scalability. </p>
+            <p class="lead">A Seasoned Data Expert with 5+ years of experience leveraging Machine Learning and Predictive Modeling to conduct financial data analysis, specializing in converting complex datasets into actionable insights with Tableau, Power BI, and QuickSight. Proficient in Python, SQL, and Excel Macros/VBA for advanced analytics, I excel in creating predictive models using scikit-learn and TensorFlow. My work includes cloud-based data management using Azure and AWS, optimizing data workflows for scalability.</p>
             <p class="lead">Demonstrated success in customer segmentation, profitability analysis, and creating dynamic dashboards, my approach integrates efficient process optimization and data standardization, enhancing financial and operational strategies. Expert in statistical analysis and Certified Lean Six Sigma Green Belt, I apply machine learning techniques to analyze financial market trends and customer behavior, significantly improving risk assessment and portfolio management.</p>
         </div>
     </section>
@@ -57,7 +116,7 @@
                         <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
                         <div class="card-body">
                             <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Developed machine learning models using Python, scikit-learn, and TensorFlow to predict car auction prices, enhancing bidding accuracy. Built a predictive model for luxury watch price fluctuations, visualized with Tableau and processed on Azure Cloud. Created a PowerBI dashboard to analyze Amazon marketplace trends, optimizing inventory with Python and AWS for data management. Handled complex data tasks in PostgreSQL and big data processing with PySpark, integrating Azure and AWS for scalable solutions.</p>
+                            <p class="card-text">Developed machine learning models using Python, scikit-learn, and TensorFlow to predict car auction prices, enhancing bidding accuracy. Built a predictive model for luxury watch price fluctuations, visualized with Tableau and processed on Azure Cloud. Created a PowerBI dashboard to analyze Amazon marketplace trends, optimizing inventory with Python and AWS for data management.</p>
                             <a href="#" class="card-link">Blog Post</a>
                             <a href="#" class="card-link">Source Code</a>
                         </div>
@@ -144,10 +203,10 @@
             <h2 class="display-4">Contact Me</h2>
             <div class="row contact-info">
                 <div class="col-md-6">
-                    <p><img src="icons/email.png" alt="Email" class="img-fluid"> lorenipsum@gmail.com</p>
+                    <p><img src="icons/email.png" alt="Email" class="img-fluid"> arunabhosom@gmail.com</p>
                 </div>
                 <div class="col-md-6">
-                    <p><img src="icons/phone.png" alt="Phone" class="img-fluid"> 415xxxxxxx</p>
+                    <p><img src="icons/phone.png" alt="Phone" class="img-fluid"> 4379864454</p>
                 </div>
             </div>
             <div class="row social-icons">
