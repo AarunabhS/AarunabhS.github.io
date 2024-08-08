@@ -93,12 +93,30 @@
             padding: 100px 0;
             color: #FFFFFF;
             text-align: center;
+            background-color: #000000; /* Assuming you want a black background */
         }
         .quote-text {
             font-size: 2rem;
             color: #E7FA71;
             margin-bottom: 20px;
             text-align: left;
+        }
+        .additional-text {
+            font-size: 1.2rem; /* Adjust as necessary */
+            color: #FFFFFF;
+        }
+        .decorative-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Optional: Add some border radius for a better look */
+        }
+        @media (max-width: 768px) {
+            .quote-text {
+                font-size: 1.5rem;
+            }
+            .additional-text {
+                font-size: 1rem;
+            }
         }
         .additional-text {
             color: rgba(255, 255, 255, 0.8);
@@ -464,20 +482,24 @@
     </section>
 
     <!-- Quote Section (New Page) -->
+    
     <section class="quote-section" id="quote-section">
-        <div class="container d-flex align-items-center justify-content-between">
-            <div class="quote-content">
-                <blockquote class="blockquote text-left">
-                    <p class="quote-text">"You can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future."</p>
-                    <footer class="blockquote-footer text-left">Steve Jobs</footer>
-                </blockquote>
-                <p class="additional-text text-left">It can be hard to trust in the process when you can’t see the bigger picture. But you never know what might be around the corner, so you have to keep moving forward. And one day, you may recognize that some of the hardest things you had to go through were also the best things that ever happened to you.</p>
-            </div>
-            <div class="image-container">
-                <img src="images/skills/image 14.jpeg" alt="Black Wavy Background" class="decorative-image">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <blockquote class="blockquote text-left">
+                        <p class="quote-text">"You can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future."</p>
+                        <footer class="blockquote-footer text-left">Steve Jobs</footer>
+                    </blockquote>
+                    <p class="additional-text text-left">It can be hard to trust in the process when you can’t see the bigger picture. But you never know what might be around the corner, so you have to keep moving forward. And one day, you may recognize that some of the hardest things you had to go through were also the best things that ever happened to you.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://img.freepik.com/premium-photo/brain-bulb-creative-idea-with-brain-light-bulb-machine-learninggenerative-ai_841229-449.jpg" alt="Black Wavy Background" class="img-fluid decorative-image">
+                </div>
             </div>
         </div>
     </section>
+
 
     <section id= "experience", class="experience-section">
         <div class="container">
