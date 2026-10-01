@@ -112,14 +112,41 @@
   if (!ctx) return;
   const art=canvas.parentElement;
   let width=0,height=0,frame=0,lastFrame=0,visible=true,rotation=0,px=0,py=0,tx=0,ty=0;
-  const points=[];
-  const count=1200;
+  let hovering=false,shape=0,scatter=0,pointerX=0,pointerY=0,hasPointer=false;
+  let palette;
+  const count=1100,points=[],projected=[];
+  const names=['Sphere','Torus','Double helix','Ribbon'];
+  const state=art.querySelector('.signal-state');
+  const hint=art.querySelector('.art-baseline>span:last-child');
+  if(hint && !fine.matches)hint.textContent='TAP TO CHANGE FORM ↗';
+  const random=i=>{const n=Math.sin(i*127.1+311.7)*43758.5453;return n-Math.floor(n);};
   for(let i=0;i<count;i++) {
-    const y=1-(i/(count-1))*2;
-    const r=Math.sqrt(1-y*y);
-    const angle=i*2.399963229728653;
-    points.push({x:Math.cos(angle)*r,y,z:Math.sin(angle)*r,seed:(i*13.71)%1});
+    const t=i/(count-1),y=1-t*2,r=Math.sqrt(1-y*y),angle=i*2.399963229728653;
+    const sphere={x:Math.cos(angle)*r,y,z:Math.sin(angle)*r};
+    const u=t*Math.PI*2,v=angle;
+    const torus={x:(.76+.25*Math.cos(v))*Math.cos(u),y:.25*Math.sin(v),z:(.76+.25*Math.cos(v))*Math.sin(u)};
+    const strand=i%2,helixAngle=t*Math.PI*4+strand*Math.PI;
+    const thickness=.065,offset=random(i+7)*Math.PI*2;
+    const helix={x:.60*Math.cos(helixAngle)+thickness*Math.cos(offset),y:y*1.12,z:.60*Math.sin(helixAngle)+thickness*Math.sin(offset)};
+    const across=(random(i+91)-.5)*.52;
+    const ribbon={x:(t*2-1)*1.13,y:Math.sin(t*Math.PI*3)*.46+across*Math.cos(t*Math.PI*3),z:Math.cos(t*Math.PI*3)*.34+across*Math.sin(t*Math.PI*3)};
+    points.push({...sphere,vx:0,vy:0,vz:0,seed:random(i+20),forms:[sphere,torus,helix,ribbon],sx:random(i+31)-.5,sy:random(i+45)-.5,sz:random(i+56)-.5});
+    projected.push({x:0,y:0,z:0,ox:0,oy:0,alpha:0,size:0,seed:points[i].seed});
   }
+  function readPalette() {
+    const css=getComputedStyle(root);
+    palette={main:css.getPropertyValue('--sculpture-main').trim()||'209, 240, 164',secondary:css.getPropertyValue('--sculpture-secondary').trim()||'178, 178, 218',glow:css.getPropertyValue('--sculpture-glow').trim()||'174, 215, 102'};
+  }
+  function changeShape() {
+    if(reduced.matches||paused)return;
+    shape=(shape+1)%names.length;scatter=1;
+    points.forEach(p=>{p.vx+=p.sx*.32;p.vy+=p.sy*.32;p.vz+=p.sz*.32;});
+    canvas.dataset.shape=names[shape].toLowerCase().replaceAll(' ','-');
+    if(state)state.textContent=`0${shape+1} / ${names[shape].toUpperCase()} · SCATTER → REFORM`;
+    start();
+  }
+  readPalette();
+  canvas.dataset.shape='sphere';
   function size() {
     const rect=art.getBoundingClientRect();width=rect.width;height=rect.height;
     const ratio=Math.min(devicePixelRatio||1,2);
@@ -128,56 +155,81 @@
     draw(0);
   }
   function draw(timestamp) {
-    if (timestamp && timestamp-lastFrame<32 && !reduced.matches) {frame=requestAnimationFrame(draw);return;}
-    if (timestamp) {rotation+=.0035;lastFrame=timestamp;}
+    const animated=timestamp && !reduced.matches && !paused;
+    if (animated && timestamp-lastFrame<32) {frame=requestAnimationFrame(draw);return;}
+    const step=animated?Math.min(1.6,Math.max(.5,(timestamp-lastFrame)/33.333)):0;
+    if(animated) {rotation+=.0023*step;lastFrame=timestamp;scatter*=Math.pow(.89,step);}
     const small=width<450;
-    const radius=Math.min(width*.32,height*.34);
-    const cx=width*.52,cy=height*.5;
-    px+=(tx-px)*.035;py+=(ty-py)*.035;
-    const angle=rotation+px*.25;
-    const ca=Math.cos(angle),sa=Math.sin(angle),tilt=-.33+py*.14,ct=Math.cos(tilt),st=Math.sin(tilt);
+    const radius=Math.min(width*.32,height*.30);
+    if(animated){px+=(tx-px)*.09;py+=(ty-py)*.09;}
+    const cx=width*(.52+px*.07),cy=height*(.49+py*.055);
+    const angle=rotation+px*.36;
+    const ca=Math.cos(angle),sa=Math.sin(angle),tilt=-.36+py*.26,ct=Math.cos(tilt),st=Math.sin(tilt);
     ctx.clearRect(0,0,width,height);
-    const glow=ctx.createRadialGradient(cx,cy,5,cx,cy,radius*1.65);glow.addColorStop(0,'rgba(154,200,66,.065)');glow.addColorStop(1,'rgba(154,200,66,0)');ctx.fillStyle=glow;ctx.fillRect(0,0,width,height);
-    ctx.strokeStyle='rgba(166,208,108,.20)';ctx.lineWidth=.6;
-    for(let orbit=0;orbit<3;orbit++) {
+    const glow=ctx.createRadialGradient(cx,cy,5,cx,cy,radius*1.75);glow.addColorStop(0,`rgba(${palette.glow},.085)`);glow.addColorStop(1,`rgba(${palette.glow},0)`);ctx.fillStyle=glow;ctx.fillRect(0,0,width,height);
+    ctx.strokeStyle=`rgba(${palette.main},.10)`;ctx.lineWidth=.65;
+    for(let orbit=0;orbit<2;orbit++) {
       ctx.beginPath();
       for(let n=0;n<=100;n++) {
         const a=n/100*Math.PI*2;
-        const ox=Math.cos(a)*radius*(1.13+orbit*.08),oy=Math.sin(a)*radius*(.36+orbit*.12);
-        const rot=-.6+orbit*.65;
+        const ox=Math.cos(a)*radius*(1.24+orbit*.06),oy=Math.sin(a)*radius*(.36+orbit*.20);
+        const rot=-.6+orbit*1.0+px*.12;
         const x=ox*Math.cos(rot)-oy*Math.sin(rot),y=ox*Math.sin(rot)+oy*Math.cos(rot);
         if(n===0)ctx.moveTo(cx+x,cy+y);else ctx.lineTo(cx+x,cy+y);
       }
       ctx.stroke();
     }
-    const morph = reduced.matches ? 0 : Math.min(1,Math.max(0,scrollY/(height*1.7)))*.28;
-    const drawn=points.map((point,i) => {
-      const distortion=1+.08*Math.sin(point.y*7+rotation*2);
-      const x=(point.x*ca-point.z*sa)*distortion;
+    points.forEach((point,i) => {
+      const target=point.forms[shape];
+      if(animated) {
+        const spread=scatter*1.4;
+        point.vx=(point.vx+(target.x+point.sx*spread-point.x)*.025*step)*Math.pow(.78,step);
+        point.vy=(point.vy+(target.y+point.sy*spread-point.y)*.025*step)*Math.pow(.78,step);
+        point.vz=(point.vz+(target.z+point.sz*spread-point.z)*.025*step)*Math.pow(.78,step);
+        point.x+=point.vx*step;point.y+=point.vy*step;point.z+=point.vz*step;
+      }
+      const breath=1+.012*Math.sin(rotation*3+point.forms[0].y*3);
+      const x=(point.x*ca-point.z*sa)*breath;
       const z=point.x*sa+point.z*ca;
       const y=point.y*ct-z*st;
       const depth=point.y*st+z*ct;
       const perspective=2.6/(2.6-depth*.55);
-      const waveY=Math.sin(i/count*Math.PI*7+rotation)*.5;
-      return {x:cx+(x*(1-morph)+(i/count*2-1)*morph)*radius*perspective,y:cy+(y*(1-morph)+waveY*morph)*radius*perspective,z:depth,s:point.seed};
-    }).sort((a,b)=>a.z-b.z);
-    drawn.forEach(p => {
-      const alpha=.15+(p.z+1)*.35;
-      ctx.fillStyle=p.s>.965?`rgba(177,163,242,${alpha})`:`rgba(208,242,141,${alpha})`;
-      ctx.beginPath();ctx.arc(p.x,p.y,(small?.55:.7)+(p.z+1)*.42,0,Math.PI*2);ctx.fill();
+      const screenX=cx+x*radius*perspective,screenY=cy+y*radius*perspective;
+      let forceX=0,forceY=0;
+      // A soft pocket follows the pointer, moving nearby points out of its way.
+      if(hovering&&hasPointer&&!reduced.matches&&!paused) {
+        const dx=screenX-pointerX,dy=screenY-pointerY,d=Math.hypot(dx,dy),reach=radius*.48;
+        if(d<reach) {
+          const force=Math.pow(1-d/reach,2)*radius*.21;
+          forceX=dx/Math.max(1,d)*force;forceY=dy/Math.max(1,d)*force;
+        }
+      }
+      const p=projected[i];
+      if(animated){p.ox+=(forceX-p.ox)*.18*step;p.oy+=(forceY-p.oy)*.18*step;}
+      p.x=screenX+p.ox;p.y=screenY+p.oy;p.z=depth;
+      p.alpha=Math.max(.13,Math.min(.95,.24+(depth+1)*.31));
+      p.size=(small?.65:.78)+Math.max(0,depth+1)*.42;
+    });
+    // Sort a shallow copy; particle identities keep their spring state and seeds.
+    [...projected].sort((a,b)=>a.z-b.z).forEach(p => {
+      ctx.fillStyle=`rgba(${p.seed>.945?palette.secondary:palette.main},${p.alpha})`;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();
     });
     if (!reduced.matches && !paused && visible && !document.hidden) {
       frame=requestAnimationFrame(draw);
     } else frame=0;
   }
-  function start() {if(!frame && visible && !document.hidden && !paused) frame=requestAnimationFrame(draw);}
+  function start() {if(!frame && visible && !document.hidden && !paused && !reduced.matches){lastFrame=performance.now();frame=requestAnimationFrame(draw);}}
   const visibilityObserver=new IntersectionObserver(entries=>{
     visible=entries[0].isIntersecting;
     if(visible) start();else {cancelAnimationFrame(frame);frame=0;}
   });visibilityObserver.observe(art);
   new ResizeObserver(() => {cancelAnimationFrame(frame);frame=0;size();}).observe(art);
-  art.addEventListener('pointermove',event=>{if(reduced.matches||!fine.matches)return;const rect=art.getBoundingClientRect();tx=(event.clientX-rect.left)/rect.width-.5;ty=(event.clientY-rect.top)/rect.height-.5;});
-  art.addEventListener('pointerleave',()=>{tx=0;ty=0;});
+  canvas.addEventListener('pointerenter',event=>{if(event.pointerType==='touch'||!fine.matches||reduced.matches||paused)return;hovering=true;changeShape();});
+  canvas.addEventListener('pointermove',event=>{if(reduced.matches||paused||!fine.matches)return;const rect=art.getBoundingClientRect();pointerX=event.clientX-rect.left;pointerY=event.clientY-rect.top;tx=pointerX/rect.width-.5;ty=pointerY/rect.height-.5;hasPointer=true;});
+  canvas.addEventListener('pointerleave',()=>{hovering=false;hasPointer=false;tx=0;ty=0;});
+  canvas.addEventListener('pointerdown',event=>{if(event.pointerType==='touch')changeShape();});
+  document.addEventListener('portfolio:theme-change',()=>{readPalette();if(!frame)draw(0);});
   document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;}else start();});
   document.addEventListener('portfolio:motion-preference',()=>{cancelAnimationFrame(frame);frame=0;if(!paused)start();});
   reduced.addEventListener('change',()=>{root.classList.toggle('motion-ready',!reduced.matches);syncPause();cancelAnimationFrame(frame);frame=0;draw(0);});

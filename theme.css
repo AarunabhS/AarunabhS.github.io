@@ -1,0 +1,234 @@
+/* Shared palettes: white surfaces use dark type, green surfaces use light type. */
+:root {
+  --muted: #4b5548;
+  --surface-text: #f3f3e9;
+  --surface-muted: #b6c1ae;
+  --surface-soft: #a7b79a;
+  --surface-accent: #d5f580;
+  --surface-line: #3c4936;
+  --surface-panel: #1c261b;
+  --hover-wash: #d5f5800e;
+  --hover-glow: #d5f58015;
+  --sculpture-main: 209, 240, 164;
+  --sculpture-secondary: 178, 178, 218;
+  --sculpture-glow: 174, 215, 102;
+}
+/* The switch remains visible outside the mobile navigation. */
+.theme-toggle {
+  position: relative; isolation: isolate; display: inline-flex; align-items: center;
+  flex: 0 0 auto; gap: 0; width: 106px; min-height: 38px; padding: 4px;
+  margin-left: auto; margin-right: 25px; background: #ffffff08;
+  border: 1px solid #7f8c7166; border-radius: 100px; color: #b9c4af;
+  font-family: var(--sans); font-size: 10px; font-weight: 550; cursor: pointer;
+}
+.theme-toggle::before {
+  content: ''; position: absolute; inset: 4px auto 4px 4px; width: calc(50% - 4px);
+  background: #d5f580; border-radius: 100px; z-index: -1;
+  transition: transform .28s cubic-bezier(.2,.8,.2,1), background .28s;
+}
+.theme-toggle span { flex: 1; text-align: center; line-height: 26px; }
+.theme-toggle span:first-child { color: #17211a; }
+.theme-toggle:hover { border-color: var(--surface-accent); }
+.screen-header .theme-toggle { margin-right: 30px; background: #e6e9df; color: #48513f; border-color: #c4cbb8; }
+.screen-header .theme-toggle::before { background: #253321; }
+.screen-header .theme-toggle span:first-child { color: #fff; }
+/* Natural portrait colour, with the label on its own neutral surface. */
+.portrait-frame { background: #f4f4f2; border: 1px solid #ffffff26; }
+.portrait-frame img, .hero-person img { filter: none; mix-blend-mode: normal; }
+.portrait-frame:hover img { filter: none; transform: scale(1.025); }
+.portrait-stamp { color: #fff; background: #17211ae8; border-color: #ffffff35; }
+.signal-art::before { pointer-events: none; }
+/* Each experience reads as a responsive, individual chapter. */
+.experience details {
+  position: relative; isolation: isolate; border-bottom-color: var(--surface-line);
+  transition: border-color .3s, background .3s, box-shadow .3s;
+}
+.experience details::before {
+  content: ''; position: absolute; inset: 0 -18px; z-index: -1; border-radius: 8px;
+  background: var(--hover-wash); opacity: 0; transform: scale(.985);
+  transition: opacity .3s, transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.experience summary { position: relative; transition: padding .35s cubic-bezier(.2,.8,.2,1); }
+.experience summary::before {
+  content: ''; position: absolute; left: -18px; top: 24px; bottom: 24px; width: 2px;
+  background: var(--surface-accent); transform: scaleY(0); transform-origin: center;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.experience summary strong { font-weight: 500; transition: color .25s, translate .35s; }
+.experience .details-sign {
+  display: grid; place-items: center; width: 29px; height: 29px; border-radius: 50%;
+  transition: transform .3s, background .3s, color .3s;
+}
+.experience details:is(:hover, :focus-within)::before { opacity: 1; transform: scale(1); }
+.experience details:is(:hover, :focus-within) { border-bottom-color: var(--surface-soft); }
+.experience details:is(:hover, :focus-within) summary strong { color: var(--surface-accent); translate: 4px 0; }
+.experience details:is(:hover, :focus-within) summary::before { transform: scaleY(1); }
+.experience details:is(:hover, :focus-within) .details-sign { background: var(--surface-accent); color: var(--night); }
+.experience details[open] .experience-detail { animation: experience-open .35s ease both; }
+@keyframes experience-open { from { opacity: 0; transform: translateY(-7px); } to { opacity: 1; transform: translateY(0); } }
+/* Stronger secondary copy and control labels on the light sections. */
+.section-aside, .project-description, .lab-title-row p, .control-explainer,
+.demo-provenance, .result-explanation, .lab-footnote, .lab-footnote>span,
+.range-limits, .bar-labels, .live-link-row, .player-records article>p,
+.player-records dt, .player-records small { color: #4b5548; }
+.project-number, .filter-caption, .project-tags>span, .lab-topline,
+.lab-topline>span:last-child, .lab-tabs button, .demo-metric small,
+.demo-metric>span, .talent-role>span, .talent-role small, .project-metric>span { color: #4c5943; }
+.project-status { color: #35582c; }
+.project-status.snapshot { color: #705b2b; }
+.data-badge { color: #415a2e; }
+.data-badge.synthetic { color: #6d5524; }
+.lab-workspace-heading>p, .lab-workspace-heading>p span,
+.benchmark-baseline small, .benchmark-baseline span, .saved-contexts>p,
+.saved-context small, .sentiment-score-row>span { color: #4b5548; }
+.demo-controls label, .demo-controls select { color: #303b2b; }
+.metric-missed strong { color: #7b542e; }
+.filter:not(.active)>span { color: #4c5943; }
+.project-description { font-size: 13px; }
+.project-number, .project-status { font-size: 9px; }
+.lab-topline, .lab-topline>span:last-child { font-size: 9px; }
+.demo-metric small { font-size: 10px; }
+.demo-metric>span { font-size: 9px; }
+/* Light palette applies throughout the portfolio, lab and case studies. */
+html[data-theme="white"] {
+  color-scheme: light; --paper: #fff; --deep: #f3f5f2; --white: #fff;
+  --ink: #17211a; --muted: #4b5548; --line: #d9ded8; --green: #34522b;
+  --surface-text: #17211a; --surface-muted: #495442; --surface-soft: #59694e;
+  --surface-accent: #34522b; --surface-line: #d9ded8; --surface-panel: #f5f7f4;
+  --hover-wash: #edf2e8; --hover-glow: #34522b10;
+  --sculpture-main: 58, 92, 45; --sculpture-secondary: 103, 94, 141; --sculpture-glow: 117, 148, 87;
+}
+html[data-theme="white"] body { background: #fff; color: var(--ink); }
+html[data-theme="white"] .dark-section { background: #fff; color: var(--ink); --line: #d9ded8; --muted: #4b5548; }
+html[data-theme="white"] .dark-section em { color: var(--surface-accent); }
+html[data-theme="white"] .theme-toggle { color: #53604b; background: #f1f4ee; border-color: #c9d2c3; }
+html[data-theme="white"] .theme-toggle::before { background: #fff; transform: translateX(100%); box-shadow: 0 1px 5px #17211a20; }
+html[data-theme="white"] .theme-toggle span:first-child { color: #53604b; }
+html[data-theme="white"] .theme-toggle span:last-child { color: #17211a; }
+html[data-theme="white"] .site-header,
+html[data-theme="white"] .site-header.is-scrolled { color: var(--ink); background: #fffffff2; }
+html[data-theme="white"] .header-inner { border-bottom-color: var(--line); }
+html[data-theme="white"] .site-header nav>a,
+html[data-theme="white"] .site-header .menu-toggle { color: var(--ink); }
+html[data-theme="white"] .site-header .brand { color: var(--ink); }
+html[data-theme="white"] .site-header nav>a:hover { color: var(--green); }
+html[data-theme="white"] .site-header nav .nav-contact { border-color: #a8b4a1; }
+html[data-theme="white"] .site-header nav.is-open { background: #fff; border-color: var(--line); }
+html[data-theme="white"] :is(.brand-dot,.hero-title-star,.contact-star,.callout-arrow,.details-sign,.contact-email,.resume-print-link,.stage-index,.stage-bottom>span:last-child) { color: var(--surface-accent); }
+html[data-theme="white"] :is(.brand-caption,.hero-intro,.hero-disciplines,.hero-person p span,.hero-bottom>p,.chapter-number,.story-chapter>p,.chapter-tags,.stage-top,.stage-bottom,.stage-index>span,.resume-profile>p,.resume-topline,.experience-date,.experience summary>span:nth-child(2)>span,.experience-detail p,.experience-tools span,.resume-education .eyebrow,.resume-education p span,.about-links,.capability-cloud span,.contact-bottom p) { color: var(--surface-muted); }
+html[data-theme="white"] .hero-disciplines i { color: #75806d; }
+html[data-theme="white"] .brand-caption { border-color: #c9d2c3; }
+html[data-theme="white"] :is(.hero-bottom,.art-baseline,.resume-topline,.resume-print-link,.capability-cloud) { border-color: var(--surface-line); }
+html[data-theme="white"] :is(.experience-tools span,.capability-cloud span,.scroll-circle) { border-color: #bbc8b1; }
+html[data-theme="white"] .button-lime,
+html[data-theme="white"] .lab-page .lab-next .button { background: #24341f; color: #fff; border-color: #24341f; }
+html[data-theme="white"] .button-lime:hover { background: #3c5633; }
+html[data-theme="white"] .small-dot, html[data-theme="white"] .reading-progress { background: #4b713a; }
+html[data-theme="white"] .signal-art::before { background: #91b37115; }
+html[data-theme="white"] :is(.art-topline,.art-baseline,.art-orbit-label,.motion-toggle) { color: #53684b; }
+html[data-theme="white"] .signal-callout { background: #ffffffe8; border-color: #c9d5bf; box-shadow: 0 12px 38px #25361b0d; }
+html[data-theme="white"] .signal-callout>span:nth-child(2) { color: #53684b; }
+html[data-theme="white"] .signal-callout strong { color: #24341f; }
+html[data-theme="white"] .signal-mini { border-color: #c9d5bf; }
+html[data-theme="white"] .signal-mini i { background: #628146; }
+html[data-theme="white"] .proof-strip { background: #fff; border-block: 1px solid var(--line); }
+html[data-theme="white"] .proof-manifesto { border-color: var(--line); }
+html[data-theme="white"] :is(.story-stage,.mobile-stage) { background: #f4f6f1; border-color: #cdd6c7; box-shadow: 0 15px 50px #17211a08; }
+html[data-theme="white"] .story-chapter { border-color: var(--line); }
+html[data-theme="white"] .story-chapter .text-link { color: #34522b; }
+html[data-theme="white"] .stage-dots i { background: #c1cbb8; }
+html[data-theme="white"] .stage-dots i.active { background: #34522b; }
+html[data-theme="white"] .playground-section { background: #fff; border-color: var(--line); }
+html[data-theme="white"] :is(.lab,.demo-controls select,.demo-metric,.result-explanation,.benchmark-baseline,.gains-chart) { background: #fff; border-color: #d5ddcf; }
+html[data-theme="white"] .metric-missed { background: #fcfaf6; }
+html[data-theme="white"] .lab-tabs button:hover,
+html[data-theme="white"] .lab-tabs button[aria-selected=true] { background: #f2f5ee; }
+html[data-theme="white"] .portrait-frame { border-color: #d9ded8; }
+html[data-theme="white"] .experience details:is(:hover,:focus-within) .details-sign { color: #fff; }
+html[data-theme="white"] .capability-cloud span:hover { color: #fff; background: #34522b; }
+html[data-theme="white"] .site-footer { color: #4b5548; border-color: var(--line); background: #fff; }
+html[data-theme="white"] .site-footer :is(.brand,a) { color: #24341f; }
+/* Dedicated lab. */
+html[data-theme="white"] .lab-page { background: #fff; color: #17211a; }
+html[data-theme="white"] .lab-page :is(h1 em,.lab-reading h2 em) { color: #34522b; }
+html[data-theme="white"] .lab-page :is(.lab-back-link,.lab-page-copy>.eyebrow,.lab-page-intro,.lab-page-copy>.text-link,.orbit-label,.lab-reading>div>p:last-child,.lab-reading-notes summary>span:first-child,.lab-reading-notes details p,.lab-next .text-link) { color: #495442; }
+html[data-theme="white"] .lab-page .lab-workspace { background: #fff; color: #17211a; border-block: 1px solid var(--line); }
+html[data-theme="white"] .lab-page .motion-toggle { color: #53684b; }
+html[data-theme="white"] .orbit-core { background: radial-gradient(circle at 30% 25%,#edf3e4,#dbe6d0); border-color: #8da974; box-shadow: 0 0 70px #6a8b4510; }
+html[data-theme="white"] .orbit-core span { color: #4b6140; }
+html[data-theme="white"] .orbit-core strong { color: #34522b; }
+html[data-theme="white"] .orbit-dot { background: #658641; box-shadow: 0 0 25px #65864120; }
+html[data-theme="white"] .orbit-dot-two { background: #8273ac; }
+html[data-theme="white"] .lab-reading-notes details { border-color: var(--line); }
+/* Case-study surfaces use the same contrast-aware semantic palette. */
+html[data-theme="white"] .case-page { --case-bg:#fff; --case-panel:#f5f7f3; --case-cream:#17211a; --case-muted:#4b5548; --case-line:#d9ded8; --case-accent:#34522b; }
+html[data-theme="white"] .case-cover { background: var(--case-panel); }
+html[data-theme="white"] :is(.case-provenance,.case-gallery-hint) { color: var(--case-muted); }
+html[data-theme="white"] .case-lab-callout { background: #f4f7ef; color: #17211a; }
+html[data-theme="white"] .case-lab-callout h2 em { color: #34522b; }
+html[data-theme="white"] .case-lab-callout .button { background: #24341f; color: #fff; }
+/* Printed résumé remains the reviewed two-page document. */
+@media screen {
+  html[data-theme="white"] .resume-page-view { --cream:#fff; --muted:#4b5548; }
+  html[data-theme="white"] .resume-page-view .resume-page { background:#fff; }
+}
+@media(max-width:1100px) {
+  .theme-toggle { width: 94px; margin-right: 18px; }
+  .brand-caption { display: none; }
+  .site-header nav { gap: 20px; }
+}
+@media(max-width:850px) {
+  .site-header:not(.case-header) .menu-toggle { display: flex; align-items: center; gap: 9px; min-height:44px; font-size:11px; }
+  .site-header:not(.case-header) .menu-toggle>span { font-size:22px; }
+  .site-header:not(.case-header) nav { display:none; position:absolute; top:79px; left:0; right:0; padding:17px 25px; background:var(--night); border-bottom:1px solid #4c5a3f; box-shadow:0 15px 25px #0002; }
+  .site-header:not(.case-header) nav.is-open { display:flex; flex-direction:column; align-items:stretch; gap:0; }
+  .site-header:not(.case-header) nav>a { padding:14px 0; min-height:44px; font-size:13px; }
+  .site-header:not(.case-header) nav .nav-contact { border:0; border-top:1px solid #4c5a3f; border-radius:0; margin:8px 0 0; padding:14px 0; }
+  .site-header:not(.case-header).is-scrolled nav { top:67px; }
+  html[data-theme="white"] .site-header:not(.case-header) nav { background:#fff; border-color:var(--line); }
+  html[data-theme="white"] .site-header:not(.case-header) nav .nav-contact { border-color:var(--line); }
+  .theme-toggle { margin-right:20px; }
+  .experience details::before { inset-inline:-12px; }
+  .experience summary::before { left:-12px; }
+}
+@media(max-width:760px) {
+  .case-header .theme-toggle { margin-right:0; }
+  .case-header nav { margin-left:18px; }
+  .case-header nav>a:nth-child(2) { display:none; }
+  .screen-header .theme-toggle { margin-right:16px; }
+  .screen-header nav { gap:16px; }
+}
+@media(min-width:601px) and (max-width:760px) {
+  .hero-grid { display:flex; flex-direction:column; align-items:stretch; gap:28px; padding-top:45px; }
+  .hero h1 { font-size:clamp(48px,9vw,68px); }
+  .hero-intro { font-size:16px; }
+  .hero-actions { flex-direction:row; align-items:center; }
+  .hero-disciplines { font-size:8px; }
+  .signal-art { width:min(470px,100%); height:400px; margin:0 auto 25px; }
+  .art-topline { font-size:8px; }
+  .art-baseline { font-size:7px; }
+}
+@media(max-width:600px) {
+  .site-header:not(.case-header) nav { top:72px; }
+  .site-header:not(.case-header).is-scrolled nav { top:63px; }
+  .theme-toggle { width:94px; min-height:38px; font-size:9px; }
+  .case-header .brand { font-size:21px; }
+  .screen-header .theme-toggle { margin-right:0; }
+  .screen-header nav { display:none; }
+  .project-status { font-size:8px; }
+  .lab-topline,.lab-topline>span:last-child { font-size:8px; }
+  .experience .details-sign { width:24px; height:24px; }
+}
+@media(max-width:360px) {
+  .theme-toggle { width:85px; margin-right:12px; }
+  .case-header nav { margin-left:10px; }
+  .case-header nav>a { font-size:8px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .theme-toggle::before,.experience details,.experience details::before,
+  .experience summary,.experience summary::before,.experience summary strong,
+  .experience .details-sign { transition:none; }
+  .experience details[open] .experience-detail { animation:none; }
+  .experience details:is(:hover,:focus-within) summary strong { translate:none; }
+}
+@media print { .theme-toggle { display:none!important; } }
