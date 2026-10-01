@@ -1,0 +1,1248 @@
+{
+  "source": "Saved PlayerPulse club-league archive · recorded FBref season totals",
+  "commit": "27bb729b114f6204be8a42920e0919474236fcf5",
+  "workingTreeChanges": true,
+  "capturedOn": "2026-09-30",
+  "scope": "club_league",
+  "players": [
+    {
+      "id": "ec7f5d1194ff78c8",
+      "name": "Lionel Messi",
+      "ages": [
+        {
+          "age": 17,
+          "seasonEnds": [
+            "2005"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 0.8,
+          "matches": 7,
+          "minutes": 70,
+          "goals": 1,
+          "assists": 0
+        },
+        {
+          "age": 18,
+          "seasonEnds": [
+            "2006"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 10.1,
+          "matches": 17,
+          "minutes": 911,
+          "goals": 6,
+          "assists": 3
+        },
+        {
+          "age": 19,
+          "seasonEnds": [
+            "2007"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 22,
+          "matches": 26,
+          "minutes": 1983,
+          "goals": 14,
+          "assists": 3
+        },
+        {
+          "age": 20,
+          "seasonEnds": [
+            "2008"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 21.9,
+          "matches": 27,
+          "minutes": 1973,
+          "goals": 10,
+          "assists": 12
+        },
+        {
+          "age": 21,
+          "seasonEnds": [
+            "2009"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 28,
+          "matches": 31,
+          "minutes": 2516,
+          "goals": 23,
+          "assists": 11
+        },
+        {
+          "age": 22,
+          "seasonEnds": [
+            "2010"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 31.2,
+          "matches": 35,
+          "minutes": 2805,
+          "goals": 34,
+          "assists": 9
+        },
+        {
+          "age": 23,
+          "seasonEnds": [
+            "2011"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 31.8,
+          "matches": 33,
+          "minutes": 2858,
+          "goals": 31,
+          "assists": 19
+        },
+        {
+          "age": 24,
+          "seasonEnds": [
+            "2012"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 36.3,
+          "matches": 37,
+          "minutes": 3270,
+          "goals": 50,
+          "assists": 16
+        },
+        {
+          "age": 25,
+          "seasonEnds": [
+            "2013"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 29.4,
+          "matches": 32,
+          "minutes": 2650,
+          "goals": 46,
+          "assists": 11
+        },
+        {
+          "age": 26,
+          "seasonEnds": [
+            "2014"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 27.8,
+          "matches": 31,
+          "minutes": 2501,
+          "goals": 28,
+          "assists": 11
+        },
+        {
+          "age": 27,
+          "seasonEnds": [
+            "2015"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 37.5,
+          "matches": 38,
+          "minutes": 3375,
+          "goals": 43,
+          "assists": 18
+        },
+        {
+          "age": 28,
+          "seasonEnds": [
+            "2016"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.3,
+          "matches": 33,
+          "minutes": 2729,
+          "goals": 26,
+          "assists": 14
+        },
+        {
+          "age": 29,
+          "seasonEnds": [
+            "2017"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 31.4,
+          "matches": 34,
+          "minutes": 2830,
+          "goals": 37,
+          "assists": 9
+        },
+        {
+          "age": 30,
+          "seasonEnds": [
+            "2018"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 33.3,
+          "matches": 36,
+          "minutes": 3000,
+          "goals": 34,
+          "assists": 12
+        },
+        {
+          "age": 31,
+          "seasonEnds": [
+            "2019"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.1,
+          "matches": 34,
+          "minutes": 2713,
+          "goals": 36,
+          "assists": 13
+        },
+        {
+          "age": 32,
+          "seasonEnds": [
+            "2020"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 32,
+          "matches": 33,
+          "minutes": 2880,
+          "goals": 25,
+          "assists": 21
+        },
+        {
+          "age": 33,
+          "seasonEnds": [
+            "2021"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 33.6,
+          "matches": 35,
+          "minutes": 3023,
+          "goals": 30,
+          "assists": 9
+        },
+        {
+          "age": 34,
+          "seasonEnds": [
+            "2022"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 23.9,
+          "matches": 26,
+          "minutes": 2153,
+          "goals": 6,
+          "assists": 14
+        },
+        {
+          "age": 35,
+          "seasonEnds": [
+            "2023"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 31.5,
+          "matches": 32,
+          "minutes": 2837,
+          "goals": 16,
+          "assists": 16
+        }
+      ]
+    },
+    {
+      "id": "ef184c5f0b1919ed",
+      "name": "Ronaldinho",
+      "ages": [
+        {
+          "age": 21,
+          "seasonEnds": [
+            "2002"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Division 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 21.3,
+          "matches": 28,
+          "minutes": 1919,
+          "goals": 9,
+          "assists": 8
+        },
+        {
+          "age": 22,
+          "seasonEnds": [
+            "2003"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 21.4,
+          "matches": 27,
+          "minutes": 1926,
+          "goals": 8,
+          "assists": 7
+        },
+        {
+          "age": 23,
+          "seasonEnds": [
+            "2004"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 29.7,
+          "matches": 32,
+          "minutes": 2677,
+          "goals": 15,
+          "assists": 5
+        },
+        {
+          "age": 24,
+          "seasonEnds": [
+            "2005"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 34.1,
+          "matches": 35,
+          "minutes": 3071,
+          "goals": 9,
+          "assists": 9
+        },
+        {
+          "age": 25,
+          "seasonEnds": [
+            "2006"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 28,
+          "matches": 29,
+          "minutes": 2523,
+          "goals": 17,
+          "assists": 14
+        },
+        {
+          "age": 26,
+          "seasonEnds": [
+            "2007"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.4,
+          "matches": 32,
+          "minutes": 2733,
+          "goals": 21,
+          "assists": 8
+        },
+        {
+          "age": 27,
+          "seasonEnds": [
+            "2008"
+          ],
+          "clubs": [
+            "Barcelona"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 13,
+          "matches": 17,
+          "minutes": 1168,
+          "goals": 8,
+          "assists": 2
+        },
+        {
+          "age": 28,
+          "seasonEnds": [
+            "2009"
+          ],
+          "clubs": [
+            "Milan"
+          ],
+          "competitions": [
+            "it Serie A"
+          ],
+          "sourceRows": 1,
+          "nineties": 17.9,
+          "matches": 29,
+          "minutes": 1612,
+          "goals": 8,
+          "assists": 5
+        },
+        {
+          "age": 29,
+          "seasonEnds": [
+            "2010"
+          ],
+          "clubs": [
+            "Milan"
+          ],
+          "competitions": [
+            "it Serie A"
+          ],
+          "sourceRows": 1,
+          "nineties": 32.1,
+          "matches": 36,
+          "minutes": 2886,
+          "goals": 12,
+          "assists": 13
+        },
+        {
+          "age": 30,
+          "seasonEnds": [
+            "2011"
+          ],
+          "clubs": [
+            "Milan"
+          ],
+          "competitions": [
+            "it Serie A"
+          ],
+          "sourceRows": 1,
+          "nineties": 6.8,
+          "matches": 11,
+          "minutes": 608,
+          "goals": 0,
+          "assists": 3
+        }
+      ]
+    },
+    {
+      "id": "07108366e82d166f",
+      "name": "Cristiano Ronaldo",
+      "ages": [
+        {
+          "age": 18,
+          "seasonEnds": [
+            "2004"
+          ],
+          "clubs": [
+            "Manchester Utd"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 17.3,
+          "matches": 29,
+          "minutes": 1555,
+          "goals": 4,
+          "assists": 4
+        },
+        {
+          "age": 19,
+          "seasonEnds": [
+            "2005"
+          ],
+          "clubs": [
+            "Manchester Utd"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 26.9,
+          "matches": 33,
+          "minutes": 2423,
+          "goals": 5,
+          "assists": 4
+        },
+        {
+          "age": 20,
+          "seasonEnds": [
+            "2006"
+          ],
+          "clubs": [
+            "Manchester Utd"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 25.4,
+          "matches": 33,
+          "minutes": 2286,
+          "goals": 9,
+          "assists": 6
+        },
+        {
+          "age": 21,
+          "seasonEnds": [
+            "2007"
+          ],
+          "clubs": [
+            "Manchester Utd"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.9,
+          "matches": 34,
+          "minutes": 2781,
+          "goals": 17,
+          "assists": 8
+        },
+        {
+          "age": 22,
+          "seasonEnds": [
+            "2008"
+          ],
+          "clubs": [
+            "Manchester Utd"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.5,
+          "matches": 34,
+          "minutes": 2747,
+          "goals": 31,
+          "assists": 6
+        },
+        {
+          "age": 23,
+          "seasonEnds": [
+            "2009"
+          ],
+          "clubs": [
+            "Manchester Utd"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.5,
+          "matches": 33,
+          "minutes": 2742,
+          "goals": 18,
+          "assists": 6
+        },
+        {
+          "age": 24,
+          "seasonEnds": [
+            "2010"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 27.3,
+          "matches": 29,
+          "minutes": 2461,
+          "goals": 26,
+          "assists": 7
+        },
+        {
+          "age": 25,
+          "seasonEnds": [
+            "2011"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 32.4,
+          "matches": 34,
+          "minutes": 2914,
+          "goals": 40,
+          "assists": 9
+        },
+        {
+          "age": 26,
+          "seasonEnds": [
+            "2012"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 37.2,
+          "matches": 38,
+          "minutes": 3350,
+          "goals": 46,
+          "assists": 12
+        },
+        {
+          "age": 27,
+          "seasonEnds": [
+            "2013"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.2,
+          "matches": 34,
+          "minutes": 2716,
+          "goals": 34,
+          "assists": 10
+        },
+        {
+          "age": 28,
+          "seasonEnds": [
+            "2014"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 28.2,
+          "matches": 30,
+          "minutes": 2534,
+          "goals": 31,
+          "assists": 9
+        },
+        {
+          "age": 29,
+          "seasonEnds": [
+            "2015"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 34.4,
+          "matches": 35,
+          "minutes": 3100,
+          "goals": 48,
+          "assists": 16
+        },
+        {
+          "age": 30,
+          "seasonEnds": [
+            "2016"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 35.4,
+          "matches": 36,
+          "minutes": 3183,
+          "goals": 35,
+          "assists": 9
+        },
+        {
+          "age": 31,
+          "seasonEnds": [
+            "2017"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 28.2,
+          "matches": 29,
+          "minutes": 2539,
+          "goals": 25,
+          "assists": 6
+        },
+        {
+          "age": 32,
+          "seasonEnds": [
+            "2018"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 25.4,
+          "matches": 27,
+          "minutes": 2285,
+          "goals": 26,
+          "assists": 5
+        },
+        {
+          "age": 33,
+          "seasonEnds": [
+            "2019"
+          ],
+          "clubs": [
+            "Juventus"
+          ],
+          "competitions": [
+            "it Serie A"
+          ],
+          "sourceRows": 1,
+          "nineties": 29.9,
+          "matches": 31,
+          "minutes": 2688,
+          "goals": 21,
+          "assists": 8
+        },
+        {
+          "age": 34,
+          "seasonEnds": [
+            "2020"
+          ],
+          "clubs": [
+            "Juventus"
+          ],
+          "competitions": [
+            "it Serie A"
+          ],
+          "sourceRows": 1,
+          "nineties": 32.4,
+          "matches": 33,
+          "minutes": 2917,
+          "goals": 31,
+          "assists": 5
+        },
+        {
+          "age": 35,
+          "seasonEnds": [
+            "2021"
+          ],
+          "clubs": [
+            "Juventus"
+          ],
+          "competitions": [
+            "it Serie A"
+          ],
+          "sourceRows": 1,
+          "nineties": 31.1,
+          "matches": 33,
+          "minutes": 2802,
+          "goals": 29,
+          "assists": 2
+        },
+        {
+          "age": 36,
+          "seasonEnds": [
+            "2022"
+          ],
+          "clubs": [
+            "Juventus",
+            "Manchester Utd"
+          ],
+          "competitions": [
+            "eng Premier League",
+            "it Serie A"
+          ],
+          "sourceRows": 2,
+          "nineties": 27.6,
+          "matches": 31,
+          "minutes": 2487,
+          "goals": 18,
+          "assists": 3
+        },
+        {
+          "age": 37,
+          "seasonEnds": [
+            "2023"
+          ],
+          "clubs": [
+            "Manchester Utd"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 5.8,
+          "matches": 10,
+          "minutes": 525,
+          "goals": 1,
+          "assists": 0
+        }
+      ]
+    },
+    {
+      "id": "7c62324b783a29f7",
+      "name": "Kylian Mbappé",
+      "ages": [
+        {
+          "age": 16,
+          "seasonEnds": [
+            "2016"
+          ],
+          "clubs": [
+            "Monaco"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 3.3,
+          "matches": 11,
+          "minutes": 296,
+          "goals": 1,
+          "assists": 1
+        },
+        {
+          "age": 17,
+          "seasonEnds": [
+            "2017"
+          ],
+          "clubs": [
+            "Monaco"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 16.6,
+          "matches": 29,
+          "minutes": 1498,
+          "goals": 15,
+          "assists": 7
+        },
+        {
+          "age": 18,
+          "seasonEnds": [
+            "2018"
+          ],
+          "clubs": [
+            "Monaco",
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 2,
+          "nineties": 24.1,
+          "matches": 28,
+          "minutes": 2168,
+          "goals": 13,
+          "assists": 8
+        },
+        {
+          "age": 19,
+          "seasonEnds": [
+            "2019"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 26,
+          "matches": 29,
+          "minutes": 2343,
+          "goals": 33,
+          "assists": 7
+        },
+        {
+          "age": 20,
+          "seasonEnds": [
+            "2020"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 16.8,
+          "matches": 20,
+          "minutes": 1513,
+          "goals": 18,
+          "assists": 5
+        },
+        {
+          "age": 21,
+          "seasonEnds": [
+            "2021"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 26.4,
+          "matches": 31,
+          "minutes": 2380,
+          "goals": 27,
+          "assists": 7
+        },
+        {
+          "age": 22,
+          "seasonEnds": [
+            "2022"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 33.6,
+          "matches": 35,
+          "minutes": 3023,
+          "goals": 28,
+          "assists": 17
+        },
+        {
+          "age": 23,
+          "seasonEnds": [
+            "2023"
+          ],
+          "clubs": [
+            "Paris S-G"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 31.3,
+          "matches": 34,
+          "minutes": 2818,
+          "goals": 29,
+          "assists": 5
+        },
+        {
+          "age": 24,
+          "seasonEnds": [
+            "2024"
+          ],
+          "clubs": [
+            "PSG"
+          ],
+          "competitions": [
+            "fr Ligue 1"
+          ],
+          "sourceRows": 1,
+          "nineties": 24,
+          "matches": 29,
+          "minutes": 2158,
+          "goals": 27,
+          "assists": 7
+        },
+        {
+          "age": 25,
+          "seasonEnds": [
+            "2025"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 32.3,
+          "matches": 34,
+          "minutes": 2907,
+          "goals": 31,
+          "assists": 3
+        },
+        {
+          "age": 26,
+          "seasonEnds": [
+            "2026"
+          ],
+          "clubs": [
+            "Real Madrid"
+          ],
+          "competitions": [
+            "es La Liga"
+          ],
+          "sourceRows": 1,
+          "nineties": 28.9,
+          "matches": 31,
+          "minutes": 2599,
+          "goals": 25,
+          "assists": 5
+        }
+      ]
+    },
+    {
+      "id": "b84448a9efca3e4c",
+      "name": "Erling Haaland",
+      "ages": [
+        {
+          "age": 19,
+          "seasonEnds": [
+            "2020"
+          ],
+          "clubs": [
+            "Dortmund"
+          ],
+          "competitions": [
+            "de Bundesliga"
+          ],
+          "sourceRows": 1,
+          "nineties": 11.8,
+          "matches": 15,
+          "minutes": 1063,
+          "goals": 13,
+          "assists": 2
+        },
+        {
+          "age": 20,
+          "seasonEnds": [
+            "2021"
+          ],
+          "clubs": [
+            "Dortmund"
+          ],
+          "competitions": [
+            "de Bundesliga"
+          ],
+          "sourceRows": 1,
+          "nineties": 26.7,
+          "matches": 28,
+          "minutes": 2407,
+          "goals": 27,
+          "assists": 6
+        },
+        {
+          "age": 21,
+          "seasonEnds": [
+            "2022"
+          ],
+          "clubs": [
+            "Dortmund"
+          ],
+          "competitions": [
+            "de Bundesliga"
+          ],
+          "sourceRows": 1,
+          "nineties": 21.2,
+          "matches": 24,
+          "minutes": 1911,
+          "goals": 22,
+          "assists": 8
+        },
+        {
+          "age": 22,
+          "seasonEnds": [
+            "2023"
+          ],
+          "clubs": [
+            "Manchester City"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.8,
+          "matches": 35,
+          "minutes": 2769,
+          "goals": 36,
+          "assists": 8
+        },
+        {
+          "age": 23,
+          "seasonEnds": [
+            "2024"
+          ],
+          "clubs": [
+            "Manchester City"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 28.4,
+          "matches": 31,
+          "minutes": 2552,
+          "goals": 27,
+          "assists": 5
+        },
+        {
+          "age": 24,
+          "seasonEnds": [
+            "2025"
+          ],
+          "clubs": [
+            "Manchester City"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 30.4,
+          "matches": 31,
+          "minutes": 2736,
+          "goals": 22,
+          "assists": 3
+        },
+        {
+          "age": 25,
+          "seasonEnds": [
+            "2026"
+          ],
+          "clubs": [
+            "Manchester City"
+          ],
+          "competitions": [
+            "eng Premier League"
+          ],
+          "sourceRows": 1,
+          "nineties": 32.8,
+          "matches": 35,
+          "minutes": 2953,
+          "goals": 27,
+          "assists": 8
+        }
+      ]
+    }
+  ]
+}

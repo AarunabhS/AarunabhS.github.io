@@ -1,0 +1,742 @@
+{
+  "capturedOn": "2026-09-30",
+  "cases": {
+    "fraud": {
+      "title": "Finding fraud in the noise",
+      "lede": "A rare-event model that makes the tradeoff between missed fraud and review workload visible.",
+      "question": "Which suspicious transactions deserve an analyst’s attention?",
+      "purpose": "Choose an investigation policy with its review workload and missed cases in view.",
+      "role": "Rare-event modelling · evaluation design · decision interface",
+      "evidenceType": "Recorded phase-two benchmark",
+      "data": "Worldline / ULB anonymized transactions: 284,807 source rows, 283,726 after deduplication. The later test partition contains 56,746 transactions and 74 fraud labels.",
+      "approach": "Chronological partitions keep later transactions out of development. The model is fitted on 45%, calibrated on an independent 15%, selected on 20%, then evaluated on the final 20%.",
+      "decisions": [
+        {
+          "title": "Evaluate later transactions",
+          "body": "Chronological partitions preserve the direction of time. Later test transactions stay outside fitting, calibration and threshold selection."
+        },
+        {
+          "title": "Keep probability calibration independent",
+          "body": "A separate reserve calibrates the fitted model. Validation selects the primary F2 threshold and review-budget policies before their test outcomes are inspected."
+        },
+        {
+          "title": "Show the operating trade-off",
+          "body": "Average precision describes ranking. The gallery and lab also reveal the actual number of captured fraud cases, false flags and missed cases at each frozen policy."
+        }
+      ],
+      "findings": [
+        "The primary F2 policy finds 55 of 74 fraud cases and makes six false flags; 19 fraud cases remain missed.",
+        "A separate 0.2% validation-budget policy finds 59 test fraud cases with 53 false flags. Its workload differs from the primary policy.",
+        "Estimated recall has uncertainty. Relative error costs are assumptions; these results do not measure money recovered."
+      ],
+      "next": "An independent, later-period sample and real investigation costs would be needed before choosing a business operating policy.",
+      "metrics": [
+        {
+          "value": "90.2%",
+          "label": "Precision",
+          "context": "55 true positives / 61 alerts"
+        },
+        {
+          "value": "74.3%",
+          "label": "Recall",
+          "context": "55 of 74 fraud labels found"
+        },
+        {
+          "value": "0.7882",
+          "label": "Average precision",
+          "context": "56,746 later test transactions"
+        }
+      ],
+      "limitations": [
+        "A two-day historical benchmark, with anonymized features and only 74 fraud cases in the test set.",
+        "An independent, later-period sample and real investigation costs would be needed before choosing a business operating policy."
+      ],
+      "skills": [
+        "Calibrated ML",
+        "Chronological holdout",
+        "Python",
+        "Reproducibility",
+        "Data visualization"
+      ],
+      "additionalImages": [
+        {
+          "src": "images/outputs/fraud-precision-recall.png",
+          "preview": "images/outputs/previews/fraud-precision-recall.webp",
+          "alt": "Precision and recall",
+          "caption": "Precision and recall describe the selected model on the later test partition. Its primary frozen threshold is separate from the review-budget policies.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/fraud-review-budget.png",
+          "preview": "images/outputs/previews/fraud-review-budget.webp",
+          "alt": "Review policy tradeoffs",
+          "caption": "Policies are chosen on validation. The chart reports their test workload and fraud capture; ties can leave a budget partly unused or change its realized test workload.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/fraud-score-distribution.png",
+          "preview": "images/outputs/previews/fraud-score-distribution.webp",
+          "alt": "Score distribution",
+          "caption": "Score distributions use the test cohort. Fraud is rare, and its anonymized features prevent a direct business explanation of an individual transaction.",
+          "width": 2750,
+          "height": 1716
+        }
+      ],
+      "sourceLinks": [
+        {
+          "label": "Source repository",
+          "url": "https://github.com/AarunabhS/Credit-Card-Fraud-Detection"
+        },
+        {
+          "label": "Dataset / benchmark source",
+          "url": "https://www.tensorflow.org/tutorials/structured_data/imbalanced_data"
+        },
+        {
+          "label": "Results report at the reviewed revision",
+          "url": "https://github.com/AarunabhS/Credit-Card-Fraud-Detection/blob/30b609c2b3e7636ebcb8ad368db425d940e6f88c/results/phase2/REPORT.md"
+        },
+        {
+          "label": "Executed notebook",
+          "url": "https://github.com/AarunabhS/Credit-Card-Fraud-Detection/blob/30b609c2b3e7636ebcb8ad368db425d940e6f88c/Fraud_Phase2.ipynb"
+        },
+        {
+          "label": "Chart provenance",
+          "url": "https://github.com/AarunabhS/Credit-Card-Fraud-Detection/blob/30b609c2b3e7636ebcb8ad368db425d940e6f88c/results/charts/chart-provenance.json"
+        }
+      ],
+      "rights": "ODbL / DbCL dataset rights; attribution retained.",
+      "snapshotCommit": "30b609c2b3e7636ebcb8ad368db425d940e6f88c",
+      "capturedOn": "2026-09-30"
+    },
+    "churn": {
+      "title": "Understanding the signals around departure",
+      "lede": "An employee-departure classifier with stable feature associations, error analysis, and a clear boundary around future use.",
+      "question": "What does a departure benchmark reveal, and what does it leave unanswered?",
+      "purpose": "Examine model behavior and audit whether the required features would be available before departure.",
+      "role": "Classification workflow · calibration · error and feature audits",
+      "evidenceType": "Recorded phase-two benchmark",
+      "data": "The public HR benchmark contains 14,999 source rows and 11,991 unique records. The held-out test partition contains 2,399 rows and 398 departure labels.",
+      "approach": "Deduplication precedes splitting. Fitting, calibration, validation and test remain separate. Development-only permutation importance checks feature-rank stability.",
+      "decisions": [
+        {
+          "title": "Remove repeated records before splitting",
+          "body": "The source contains duplicate rows. Deduplicating before partitioning prevents identical employee records from entering both development and evaluation."
+        },
+        {
+          "title": "Audit the score as well as the label",
+          "body": "Independent calibration, review policies, error slices and development-only importance checks give the benchmark an evidence trail beyond a single accuracy figure."
+        },
+        {
+          "title": "Keep associations in context",
+          "body": "Feature rankings describe this benchmark. The absence of observation dates and an explicit departure horizon prevents a claim that these inputs predict future employee behavior."
+        }
+      ],
+      "findings": [
+        "At its frozen threshold, the model identifies 360 of 398 departure labels with eight false flags; 38 departures remain missed.",
+        "Satisfaction, tenure, project count and monthly hours have strong development-set associations. Those associations do not establish causes.",
+        "Calibration and subgroup errors help inspect behavior; a random benchmark holdout cannot prove future-company performance."
+      ],
+      "next": "Use dated employee snapshots, a defined departure horizon, and an independent company cohort before testing any workplace application.",
+      "metrics": [
+        {
+          "value": "97.8%",
+          "label": "Precision",
+          "context": "360 true positives / 368 alerts"
+        },
+        {
+          "value": "90.5%",
+          "label": "Recall",
+          "context": "360 of 398 departure labels found"
+        },
+        {
+          "value": "0.9593",
+          "label": "Average precision",
+          "context": "2,399 held-out benchmark rows"
+        }
+      ],
+      "limitations": [
+        "The benchmark has no employee IDs, observation dates, or validated prediction horizon.",
+        "Use dated employee snapshots, a defined departure horizon, and an independent company cohort before testing any workplace application."
+      ],
+      "skills": [
+        "Random Forest",
+        "Calibration",
+        "Error analysis",
+        "Reproducibility",
+        "Data visualization"
+      ],
+      "additionalImages": [
+        {
+          "src": "images/outputs/churn-importance.png",
+          "preview": "images/outputs/previews/churn-importance.webp",
+          "alt": "Stable feature associations",
+          "caption": "Importance ranks come from development-only checks. A feature association does not establish that changing it will prevent a departure.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/churn-departments.png",
+          "preview": "images/outputs/previews/churn-departments.webp",
+          "alt": "Department observations",
+          "caption": "Departure recall and false-flag behavior are measured by department in the held-out test set. Wilson intervals do not cover company shift or undocumented feature timing.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/churn-calibration.png",
+          "preview": "images/outputs/previews/churn-calibration.webp",
+          "alt": "Score calibration",
+          "caption": "Calibration compares score bands with observed test departure rates. These are retrospective benchmark observations, not a validated future prediction horizon.",
+          "width": 2750,
+          "height": 1716
+        }
+      ],
+      "sourceLinks": [
+        {
+          "label": "Source repository",
+          "url": "https://github.com/AarunabhS/Predictive-Employee-Churn"
+        },
+        {
+          "label": "Dataset / benchmark source",
+          "url": "https://www.kaggle.com/datasets/liujiaqi/hr-comma-sepcsv"
+        },
+        {
+          "label": "Results report at the reviewed revision",
+          "url": "https://github.com/AarunabhS/Predictive-Employee-Churn/blob/72c987270aebe94e919e535a347784ba7fb0531e/results/phase2/REPORT.md"
+        },
+        {
+          "label": "Executed notebook",
+          "url": "https://github.com/AarunabhS/Predictive-Employee-Churn/blob/72c987270aebe94e919e535a347784ba7fb0531e/Churn_Phase2.ipynb"
+        },
+        {
+          "label": "Chart provenance",
+          "url": "https://github.com/AarunabhS/Predictive-Employee-Churn/blob/72c987270aebe94e919e535a347784ba7fb0531e/results/charts/chart-provenance.json"
+        }
+      ],
+      "rights": "CC0 as declared by the dataset publisher; source provenance remains limited.",
+      "snapshotCommit": "72c987270aebe94e919e535a347784ba7fb0531e",
+      "capturedOn": "2026-09-30"
+    },
+    "sentiment": {
+      "title": "Listening beyond a positive or negative label",
+      "lede": "Three-class sentiment analysis with human labels, a transparent baseline, and visible error patterns.",
+      "question": "How reliably can short social posts be classified by sentiment?",
+      "purpose": "Understand which classifications merit human review before aggregating customer feedback.",
+      "role": "Text modelling · benchmark design · interpretable error analysis",
+      "evidenceType": "Recorded phase-two benchmark",
+      "data": "TweetEval / SemEval-2017 sentiment: 59,899 source posts. After development overlap cleanup, all 12,284 official test posts remain intact.",
+      "approach": "Text preprocessing and vocabulary are fitted on development data. Validation macro F1 selects the three-class TF-IDF model before the official test set is evaluated.",
+      "decisions": [
+        {
+          "title": "Use the task’s human labels",
+          "body": "The current three-class benchmark evaluates negative, neutral and positive sentiment against TweetEval’s official human labels, rather than treating automated labels as ground truth."
+        },
+        {
+          "title": "Select before inspecting test performance",
+          "body": "Validation macro F1 selects the TF-IDF model. Another candidate’s test score does not retroactively change the chosen model."
+        },
+        {
+          "title": "Expose the difficult class boundary",
+          "body": "The confusion matrix makes negative-to-neutral mistakes visible. Class support and recall help explain what the overall score hides; authored demo examples do not claim to be collected customer evidence."
+        }
+      ],
+      "findings": [
+        "The selected model reaches 58.2% accuracy and 0.5587 macro F1. VADER reaches 53.0% accuracy and 0.5288 macro F1 on the same three-class test task.",
+        "Negative-to-neutral confusion is a major weakness: 2,008 of 3,972 negative posts are classified as neutral.",
+        "Mixed wording and sarcasm can challenge a lexical model. Heuristic diagnostic tags are not human annotations of sarcasm or mixed sentiment."
+      ],
+      "next": "A separately labelled, representative sample from the intended customer channel would be needed to validate a feedback workflow.",
+      "metrics": [
+        {
+          "value": "58.2%",
+          "label": "Accuracy",
+          "context": "12,284 official test posts"
+        },
+        {
+          "value": "0.5587",
+          "label": "Macro F1",
+          "context": "Equal emphasis on the three classes"
+        },
+        {
+          "value": "53.0%",
+          "label": "VADER accuracy",
+          "context": "Same official three-class test task"
+        }
+      ],
+      "limitations": [
+        "Historical social posts; no measurement of Black Friday public opinion or current customer sentiment.",
+        "A separately labelled, representative sample from the intended customer channel would be needed to validate a feedback workflow."
+      ],
+      "skills": [
+        "NLP",
+        "TF-IDF",
+        "Error analysis",
+        "Reproducibility",
+        "Data visualization"
+      ],
+      "additionalImages": [],
+      "sourceLinks": [
+        {
+          "label": "Source repository",
+          "url": "https://github.com/AarunabhS/SentimentAnalysis"
+        },
+        {
+          "label": "Dataset / benchmark source",
+          "url": "https://github.com/cardiffnlp/tweeteval"
+        },
+        {
+          "label": "Results report at the reviewed revision",
+          "url": "https://github.com/AarunabhS/SentimentAnalysis/blob/c182c4f20f51f6af19c3983e95f788c4c91bdad6/results/phase2/REPORT.md"
+        },
+        {
+          "label": "Executed notebook",
+          "url": "https://github.com/AarunabhS/SentimentAnalysis/blob/c182c4f20f51f6af19c3983e95f788c4c91bdad6/Social_Sentiment_Phase2.ipynb"
+        },
+        {
+          "label": "Chart provenance",
+          "url": "https://github.com/AarunabhS/SentimentAnalysis/blob/c182c4f20f51f6af19c3983e95f788c4c91bdad6/results/charts/chart-provenance.json"
+        }
+      ],
+      "rights": "Upstream redistribution licence unspecified; raw social-post text stays local. Demo text is authored.",
+      "snapshotCommit": "c182c4f20f51f6af19c3983e95f788c4c91bdad6",
+      "capturedOn": "2026-09-30"
+    },
+    "ctr": {
+      "title": "Putting attention where the signal is",
+      "lede": "A ranking study that prioritizes useful enrichment over a misleading accuracy headline.",
+      "question": "Can a model concentrate observed clicks in a smaller set of ad contexts?",
+      "purpose": "Assess whether ranking can prioritize a smaller set of benchmark contexts for further investigation.",
+      "role": "Grouped evaluation · ranking analytics · probability diagnostics",
+      "evidenceType": "Recorded phase-two benchmark",
+      "data": "OpenML / Tencent KDD benchmark: 39,926 deduplicated contexts. The group-isolated test partition contains 7,984 rows and 1,391 click labels.",
+      "approach": "Known users and anonymous contexts remain disjoint across fit, calibration, validation and test. Validation log loss selects the logistic model; ranking budgets are evaluated separately.",
+      "decisions": [
+        {
+          "title": "Isolate repeated user contexts",
+          "body": "Known users and anonymous context groups cannot cross fit, calibration, validation and test. User IDs and aggregate impression counts are excluded from the input features."
+        },
+        {
+          "title": "Measure ranking and probability quality",
+          "body": "Validation log loss selects the logistic model. The evaluation separately reports calibration, average precision and fixed-budget click-label enrichment."
+        },
+        {
+          "title": "Respect the sampling boundary",
+          "body": "Negative downsampling changes the base rate. Enrichment is stated relative to this test set; neither the model scores nor ad-position edits establish population CTR or a causal advertising effect."
+        }
+      ],
+      "findings": [
+        "The highest-scoring 799 test contexts contain 269 of 1,391 observed clicks: 19.3% capture in approximately 10% of rows.",
+        "That selection gives 1.93× enrichment relative to the test prevalence. Log loss is 0.4411 versus a 0.4627 prior baseline.",
+        "Sampled benchmark scores cannot establish population CTR, revenue lift, or the outcome of moving an ad to another position."
+      ],
+      "next": "Representative impression logs, timestamps and an independent campaign evaluation would be needed before interpreting scores as real campaign probabilities.",
+      "metrics": [
+        {
+          "value": "1.93×",
+          "label": "Top-10% lift",
+          "context": "799 highest-ranked test contexts"
+        },
+        {
+          "value": "19.3%",
+          "label": "Click capture",
+          "context": "269 of 1,391 click labels captured"
+        },
+        {
+          "value": "0.4411",
+          "label": "Log loss",
+          "context": "Prior baseline: 0.4627"
+        }
+      ],
+      "limitations": [
+        "The benchmark has downsampled negatives and no representative campaign timelines or population click rate.",
+        "Representative impression logs, timestamps and an independent campaign evaluation would be needed before interpreting scores as real campaign probabilities."
+      ],
+      "skills": [
+        "Logistic regression",
+        "Group isolation",
+        "Ranking analytics",
+        "Reproducibility",
+        "Data visualization"
+      ],
+      "additionalImages": [],
+      "sourceLinks": [
+        {
+          "label": "Source repository",
+          "url": "https://github.com/AarunabhS/Click-Through-Rate"
+        },
+        {
+          "label": "Dataset / benchmark source",
+          "url": "https://www.openml.org/d/1220"
+        },
+        {
+          "label": "Results report at the reviewed revision",
+          "url": "https://github.com/AarunabhS/Click-Through-Rate/blob/afd8a8ddc1e1d3dcb5e2900dd22c50dccde3fb5d/results/phase2/REPORT.md"
+        },
+        {
+          "label": "Executed notebook",
+          "url": "https://github.com/AarunabhS/Click-Through-Rate/blob/afd8a8ddc1e1d3dcb5e2900dd22c50dccde3fb5d/CTR_Phase2.ipynb"
+        },
+        {
+          "label": "Chart provenance",
+          "url": "https://github.com/AarunabhS/Click-Through-Rate/blob/afd8a8ddc1e1d3dcb5e2900dd22c50dccde3fb5d/results/charts/chart-provenance.json"
+        }
+      ],
+      "rights": "Public as declared by OpenML; upstream rights are not separately specified there.",
+      "snapshotCommit": "afd8a8ddc1e1d3dcb5e2900dd22c50dccde3fb5d",
+      "capturedOn": "2026-09-30"
+    },
+    "watch": {
+      "title": "A collection becomes a conversation.",
+      "lede": "An archival watch catalog, transformed into an explorable visual atlas.",
+      "question": "How can someone discover patterns across a catalog without losing the individual reference?",
+      "purpose": "Connect a high-level collection view to the watches that explain it.",
+      "role": "Data normalization · interactive catalog · visual storytelling",
+      "evidenceType": "Public interactive application · archival data",
+      "data": "Seven source tables describe 1,629 wristwatch references across five watchmakers. The catalog represents an archival 2023–2024 snapshot.",
+      "approach": "Normalize brands and references into one collection model, then connect search, filters and chart selections to the matching reference cards.",
+      "decisions": [
+        {
+          "title": "Use one reference model",
+          "body": "The catalog and insights share normalized brand and reference fields, so the visual overview and the individual watches remain connected."
+        },
+        {
+          "title": "Turn charts into an entry point",
+          "body": "Chart selections lead to relevant watch references. Case dimensions, movement families and collection mix become useful ways to explore the catalog."
+        },
+        {
+          "title": "Give the snapshot a clear boundary",
+          "body": "The interface presents archival specifications and inferred segment labels without implying live inventory, current prices or market value."
+        }
+      ],
+      "findings": [
+        "The reviewed catalog contains 1,629 references across five watchmakers.",
+        "Search, filters and linked insights connect collection patterns to individual references.",
+        "A public application lets visitors inspect the interaction directly, alongside the captured interface."
+      ],
+      "metrics": [
+        {
+          "value": "1,629",
+          "label": "Watch references",
+          "context": "Reviewed archival catalog"
+        },
+        {
+          "value": "5",
+          "label": "Watchmakers",
+          "context": "Collection breadth"
+        },
+        {
+          "value": "7",
+          "label": "Source tables",
+          "context": "Normalized into one catalog"
+        }
+      ],
+      "limitations": [
+        "The underlying catalog is a 2023–2024 archival snapshot.",
+        "Segment labels are inferred. Specifications and prices are not live market data."
+      ],
+      "next": "Refresh source provenance and reconcile specification changes before presenting any live purchasing or valuation workflow.",
+      "skills": [
+        "Data preparation",
+        "JavaScript",
+        "Interactive visualization",
+        "Catalog design"
+      ],
+      "additionalImages": [],
+      "sourceLinks": [
+        {
+          "label": "Public application",
+          "url": "https://www.arunabhosom.com/watch-atlas/"
+        },
+        {
+          "label": "Source repository",
+          "url": "https://github.com/AarunabhS/watch-atlas"
+        },
+        {
+          "label": "Documentation at the reviewed revision",
+          "url": "https://github.com/AarunabhS/watch-atlas/blob/d3de8def9b1b50bd23ea8844fa999f90a0aae8b7/README.md"
+        }
+      ],
+      "snapshotCommit": "d3de8def9b1b50bd23ea8844fa999f90a0aae8b7",
+      "capturedOn": "2026-09-30"
+    },
+    "playerpulse": {
+      "title": "A fairer way to compare the game.",
+      "lede": "A comparison workspace that makes age, minutes and metric coverage part of the story.",
+      "question": "How do footballers compare when age and playing time are held in view?",
+      "purpose": "Make football comparisons more transparent by aligning the available age and metric coverage.",
+      "role": "React interface · sports data pipelines · comparison design",
+      "evidenceType": "Local project capture · recorded player archive",
+      "data": "The portfolio explorer uses five players from the saved club-league archive, with recorded goals, assists and minutes. The full local project also contains World Cup views and a permission-gated match-log pipeline.",
+      "approach": "Align player records by age, calculate per-90 rates from recorded minutes, and expose missing records instead of silently filling the gaps.",
+      "decisions": [
+        {
+          "title": "Align the comparison by age",
+          "body": "Age gives visitors a consistent comparison frame. The visible records change together as the selected age changes."
+        },
+        {
+          "title": "Keep playing time visible",
+          "body": "Per-90 rates complement totals. Goals, assists and recorded minutes stay visible so visitors can read the rate in its proper context."
+        },
+        {
+          "title": "Preserve missing observations",
+          "body": "An unavailable age or metric stays unavailable. Differing player and season coverage is an explicit property of the archive."
+        }
+      ],
+      "findings": [
+        "The portfolio offers an interactive five-player comparison from the saved club-league archive.",
+        "Recorded totals and per-90 rates can be compared at the same age, including explicit missing-age states.",
+        "Screenshots preserve the broader comparison workspace and World Cup data center."
+      ],
+      "metrics": [
+        {
+          "value": "5",
+          "label": "Player archives",
+          "context": "Portfolio comparison dataset"
+        },
+        {
+          "value": "Per 90",
+          "label": "Comparable rates",
+          "context": "Calculated from recorded minutes"
+        },
+        {
+          "value": "Age",
+          "label": "Shared comparison frame",
+          "context": "Missing records stay visible"
+        }
+      ],
+      "limitations": [
+        "Source repository is private; the portfolio uses local project captures. A public live deployment was not verified.",
+        "Coverage differs by player, season and source. These are recorded club-league summaries, not a universal measure of player quality."
+      ],
+      "next": "Expand and audit comparable coverage before making claims across additional players, competitions or seasons.",
+      "skills": [
+        "React",
+        "Sports analytics",
+        "Data pipelines",
+        "Comparative visualization"
+      ],
+      "additionalImages": [],
+      "sourceLinks": [],
+      "snapshotCommit": "27bb729b114f6204be8a42920e0919474236fcf5",
+      "capturedOn": "2026-09-30"
+    },
+    "intelligence": {
+      "title": "From scattered signals to context.",
+      "lede": "A research workspace that puts company activity, hiring and supporting evidence into the same view.",
+      "question": "How can fragmented company signals become an explainable research workflow?",
+      "purpose": "Help a researcher move from a broad signal summary to the evidence behind it.",
+      "role": "React + FastAPI application · database services · automated workflows",
+      "evidenceType": "Original application interface · fictional API fixtures",
+      "data": "The reviewed project adds Insight Engine, Talent Radar and Scraper Lab. Portfolio screenshots use labelled fictional API fixtures; the Talent Radar walkthrough uses 60 synthetic jobs across four fictional companies.",
+      "approach": "Collect and aggregate company signals, surface trends and hiring capability lanes, and keep source context attached to a researcher’s drill-down.",
+      "decisions": [
+        {
+          "title": "Organize around research questions",
+          "body": "Insight Engine, Talent Radar and Scraper Lab separate company context, hiring patterns and collection inspection into focused modules."
+        },
+        {
+          "title": "Connect summaries to evidence",
+          "body": "Company views and hiring filters let visitors investigate which signals or roles underpin a broader pattern."
+        },
+        {
+          "title": "Make the walkthrough reproducible",
+          "body": "Labelled fictional fixtures demonstrate the interface and filter behavior without claiming those companies, jobs or production records are real."
+        }
+      ],
+      "findings": [
+        "Three new intelligence modules join scoring services and automated n8n workflows.",
+        "The original interface is presented with labelled fictional sample data.",
+        "The portfolio walkthrough filters 60 fictional roles by company, market and capability."
+      ],
+      "metrics": [
+        {
+          "value": "3",
+          "label": "Intelligence modules",
+          "context": "Insight Engine · Talent Radar · Scraper Lab"
+        },
+        {
+          "value": "60",
+          "label": "Illustrative roles",
+          "context": "Synthetic walkthrough dataset"
+        },
+        {
+          "value": "4",
+          "label": "Fictional companies",
+          "context": "Demonstrates comparative filtering"
+        }
+      ],
+      "limitations": [
+        "Screenshots and the portfolio walkthrough use fictional fixtures, rather than production company intelligence.",
+        "Production data requires the project backend and database. The portfolio does not demonstrate deployed scraping performance or measured research productivity."
+      ],
+      "next": "Validate collected signals against source provenance and real researcher workflows before measuring decision quality or production impact.",
+      "skills": [
+        "React",
+        "FastAPI",
+        "PostgreSQL",
+        "n8n",
+        "Evidence design"
+      ],
+      "additionalImages": [],
+      "sourceLinks": [
+        {
+          "label": "Source repository",
+          "url": "https://github.com/AarunabhS/Threat_scoring_app"
+        },
+        {
+          "label": "Documentation at the reviewed revision",
+          "url": "https://github.com/AarunabhS/Threat_scoring_app/blob/9f5fabc3f630bf35bfd9d6ded668d27db9aa009b/README.md"
+        }
+      ],
+      "snapshotCommit": "9f5fabc3f630bf35bfd9d6ded668d27db9aa009b",
+      "capturedOn": "2026-09-30"
+    },
+    "country": {
+      "title": "Turn curiosity into a place on the map.",
+      "lede": "A geography arcade that connects visual exploration with a reason to keep practising.",
+      "question": "How can map exploration and recall practice work together in one approachable experience?",
+      "purpose": "Let visitors explore, practise and play from the same country model.",
+      "role": "Interactive maps · game rules · responsive browser experience",
+      "evidenceType": "Public interactive application",
+      "data": "The reviewed application covers 195 countries and connects map exploration, country and capital challenges, flag games and private multiplayer rooms.",
+      "approach": "Share the country model across the map and game modes, then use challenge rules, scoring and room flows to turn geographic recognition into interactive practice.",
+      "decisions": [
+        {
+          "title": "Share the geography model",
+          "body": "Country, capital and flag experiences use the same foundation so the arcade remains consistent across exploration and recall challenges."
+        },
+        {
+          "title": "Give curiosity more than one route",
+          "body": "Map exploration and solo challenges make the geography approachable without requiring a multiplayer session."
+        },
+        {
+          "title": "Keep optional capabilities optional",
+          "body": "Voice support and multiplayer depend on browser or service availability. Solo play and map exploration provide independent ways to use the application."
+        }
+      ],
+      "findings": [
+        "The geography arcade includes 195 countries.",
+        "Map exploration, country and capital challenges, flag games and private rooms are brought into a single application.",
+        "The public app can be opened from the portfolio for a direct demonstration of the game experience."
+      ],
+      "metrics": [
+        {
+          "value": "195",
+          "label": "Countries",
+          "context": "Shared geography model"
+        },
+        {
+          "value": "Solo",
+          "label": "Independent practice",
+          "context": "Explore and play locally"
+        },
+        {
+          "value": "Rooms",
+          "label": "Multiplayer flow",
+          "context": "Requires the public room service"
+        }
+      ],
+      "limitations": [
+        "Optional voice input depends on browser support.",
+        "Multiplayer requires the public room service. No claim of measured learning improvement or classroom effectiveness is made."
+      ],
+      "next": "Evaluate challenge difficulty and accessibility with learners before drawing conclusions about learning outcomes.",
+      "skills": [
+        "JavaScript",
+        "Interactive maps",
+        "Game systems",
+        "Responsive interfaces"
+      ],
+      "additionalImages": [],
+      "sourceLinks": [
+        {
+          "label": "Public application",
+          "url": "https://www.arunabhosom.com/country-memory-map/"
+        },
+        {
+          "label": "Source repository",
+          "url": "https://github.com/AarunabhS/country-memory-map"
+        },
+        {
+          "label": "Documentation at the reviewed revision",
+          "url": "https://github.com/AarunabhS/country-memory-map/blob/163e5ff5ab349dc65ea40e36601d0af1a51e0a69/README.md"
+        }
+      ],
+      "snapshotCommit": "163e5ff5ab349dc65ea40e36601d0af1a51e0a69",
+      "capturedOn": "2026-09-30"
+    },
+    "agoda": {
+      "title": "A booking analysis you can follow.",
+      "lede": "A reproducible analytical workflow with visible validation, useful groupings and interactive exploration.",
+      "question": "How do booked rates and lead times vary across a selected set of booking records?",
+      "purpose": "Make the path from validated records to booking summaries easy to inspect and reproduce.",
+      "role": "Python analysis · input validation · notebook and CLI workflow",
+      "evidenceType": "Synthetic analysis demo · seed 42",
+      "data": "The portfolio uses 1,000 deterministic synthetic bookings generated by the updated analysis script with seed 42. All 1,000 rows pass validation; five synthetic cities are represented. The original workbook is absent.",
+      "approach": "Validate booking fields, report excluded records, build nonoverlapping lead-time groups, then export six charts and matching CSV summaries from a shared notebook and CLI implementation.",
+      "decisions": [
+        {
+          "title": "Validate before aggregating",
+          "body": "The workflow reports valid and excluded rows so every chart has a visible relationship to the input it summarizes."
+        },
+        {
+          "title": "Make the groups nonoverlapping",
+          "body": "Booking lead-time intervals use explicit boundaries. The same definitions power the chart outputs and the interactive explorer."
+        },
+        {
+          "title": "Label the synthetic demonstration",
+          "body": "A fixed seed makes the walkthrough reproducible while keeping the absence of the original business workbook visible. Booked rates describe the sample; they do not forecast room prices."
+        }
+      ],
+      "findings": [
+        "The reproducible workflow generates six chart outputs and CSV summaries.",
+        "The fixed-seed demonstration contains 1,000 validated bookings and zero excluded rows.",
+        "Portfolio controls recalculate counts and mean booked daily rates from the same exported records."
+      ],
+      "metrics": [
+        {
+          "value": "1,000",
+          "label": "Synthetic bookings",
+          "context": "Fixed demo seed: 42"
+        },
+        {
+          "value": "6",
+          "label": "Chart outputs",
+          "context": "Shared notebook + CLI implementation"
+        },
+        {
+          "value": "0",
+          "label": "Excluded demo rows",
+          "context": "1,000 records passed validation"
+        }
+      ],
+      "limitations": [
+        "The original workbook is absent. All portfolio charts and filters use deterministic synthetic bookings.",
+        "These results are neither Agoda business findings nor a room-price forecast. No causal conversion effect is established."
+      ],
+      "next": "Apply the validated workflow to an authorized original workbook before making business recommendations.",
+      "skills": [
+        "Python",
+        "Pandas",
+        "Data validation",
+        "Reproducible analysis",
+        "Data visualization"
+      ],
+      "additionalImages": [],
+      "sourceLinks": [
+        {
+          "label": "Source repository",
+          "url": "https://github.com/AarunabhS/Agoda-Booking-Analysis"
+        },
+        {
+          "label": "Documentation at the reviewed revision",
+          "url": "https://github.com/AarunabhS/Agoda-Booking-Analysis/blob/ba2ce45843a41fea994534e2ac99586aa4051e84/README.md"
+        }
+      ],
+      "snapshotCommit": "ba2ce45843a41fea994534e2ac99586aa4051e84",
+      "capturedOn": "2026-09-30"
+    }
+  }
+}

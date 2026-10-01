@@ -1,0 +1,914 @@
+{
+  "source": "Illustrative API fixture for Threat_scoring_app/TalentRadar.jsx; fictional companies and jobs",
+  "kind": "synthetic",
+  "commit": "9f5fabc3f630bf35bfd9d6ded668d27db9aa009b",
+  "jobs": [
+    {
+      "id": "demo-job-1",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Lead",
+      "posted_at": "2026-09-30",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-2",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-29",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-3",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-28",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-4",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-27",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-5",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-26",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-6",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Lead",
+      "posted_at": "2026-09-25",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-7",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-24",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-8",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-23",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-9",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-22",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-10",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-21",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-11",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Lead",
+      "posted_at": "2026-09-20",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-12",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-19",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-13",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-18",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-14",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-17",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-15",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-16",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-16",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Lead",
+      "posted_at": "2026-09-15",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-17",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-14",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-18",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-13",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-19",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-12",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-20",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-11",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-21",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Lead",
+      "posted_at": "2026-09-10",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-22",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-09",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-23",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-08",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-24",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-07",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-25",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-06",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-26",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Lead",
+      "posted_at": "2026-09-30",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-27",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-29",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-28",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-28",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-29",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-27",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-30",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-26",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-31",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Lead",
+      "posted_at": "2026-09-25",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-32",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-24",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-33",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-23",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-34",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-22",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-35",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-21",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-36",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Lead",
+      "posted_at": "2026-09-20",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-37",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-19",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-38",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-18",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-39",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-17",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-40",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-16",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-41",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Lead",
+      "posted_at": "2026-09-15",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-42",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-14",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-43",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-13",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-44",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-12",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-45",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-11",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-46",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Lead",
+      "posted_at": "2026-09-10",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-47",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-09",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-48",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-08",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-49",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-07",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-50",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-06",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-51",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Lead",
+      "posted_at": "2026-09-30",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-52",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-29",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-53",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-28",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-54",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-27",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-55",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-26",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-56",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Lead",
+      "posted_at": "2026-09-25",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-57",
+      "company_name": "Northstar Analytics",
+      "title": "Machine Learning Engineer",
+      "strategic_category": "AI & Machine Learning",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-24",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "AI & Machine Learning",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-58",
+      "company_name": "Meridian AI",
+      "title": "Data Platform Engineer",
+      "strategic_category": "Data Engineering",
+      "location": "Toronto, Canada",
+      "location_group": "Canada",
+      "seniority": "Senior",
+      "posted_at": "2026-09-23",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Data Engineering",
+        "Capability expansion"
+      ]
+    },
+    {
+      "id": "demo-job-59",
+      "company_name": "Atlas Data Labs",
+      "title": "Cloud Architect",
+      "strategic_category": "Cloud Platforms",
+      "location": "London, UK",
+      "location_group": "United Kingdom",
+      "seniority": "Senior",
+      "posted_at": "2026-09-22",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Cloud Platforms",
+        "Hiring activity"
+      ]
+    },
+    {
+      "id": "demo-job-60",
+      "company_name": "Haven Cloud",
+      "title": "Technical Product Manager",
+      "strategic_category": "Product & Delivery",
+      "location": "New York, US",
+      "location_group": "United States",
+      "seniority": "Senior",
+      "posted_at": "2026-09-21",
+      "description_excerpt": "Illustrative role used to demonstrate filtering and talent-market summaries. This is not a real job opening.",
+      "signals": [
+        "Product & Delivery",
+        "Capability expansion"
+      ]
+    }
+  ],
+  "brief": {
+    "summary": "An illustrative dataset of 60 roles across four fictional companies, three markets and four capability lanes.",
+    "highlights": [
+      "Filter by company, market or capability.",
+      "Open a role to understand the signal behind the summary."
+    ]
+  }
+}

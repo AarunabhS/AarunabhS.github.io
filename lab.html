@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#131513">
+  <meta name="description" content="Explore nine data and AI projects with interactive benchmark controls, recorded model outputs and public applications. An interactive lab by Arunabho Kanti Som.">
+  <title>Interactive lab | Arunabho Som</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;550;600;650;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lab.css">
+  <script src="portfolio.js" defer></script>
+  <script src="motion.js" defer></script>
+</head>
+<body class="lab-page" data-page="lab">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top"><div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Arunabho Som, home">arunabho<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">☰</span></button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="index.html#projects">Selected work</a>
+      <a href="#playground" aria-current="page">Interactive lab <span class="small-dot" aria-hidden="true"></span></a>
+      <a href="index.html#resume">Résumé</a>
+      <a class="nav-contact" href="mailto:arunabhosom@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div></header>
+  <main id="main">
+    <section class="lab-page-hero wrap" aria-labelledby="lab-page-title">
+      <div class="lab-page-copy">
+        <a class="lab-back-link" href="index.html#playground"><span aria-hidden="true">↖</span> Back to the portfolio</a>
+        <p class="eyebrow"><span class="small-dot" aria-hidden="true"></span> A space for curious questions</p>
+        <h1 id="lab-page-title">Pull a lever.<br><em>See what changes.</em></h1>
+        <p class="lab-page-intro">The best way to understand a project is to explore it.<br>Change a budget, compare a player, question a model.<br>The evidence is right here with you.</p>
+        <a class="text-link" href="#playground">Choose an experiment <span aria-hidden="true">↓</span></a><button class="motion-toggle lab-motion-toggle" type="button" aria-pressed="false">Pause motion</button>
+      </div>
+      <div class="lab-orbit" aria-hidden="true">
+        <div class="orbit-ring orbit-ring-one"></div><div class="orbit-ring orbit-ring-two"></div><div class="orbit-ring orbit-ring-three"></div>
+        <span class="orbit-dot orbit-dot-one"></span><span class="orbit-dot orbit-dot-two"></span><span class="orbit-dot orbit-dot-three"></span>
+        <div class="orbit-core"><span>input</span><strong>↗</strong><span>possibility</span></div>
+        <span class="orbit-label orbit-label-one">question → evidence</span><span class="orbit-label orbit-label-two">09 projects to explore</span>
+      </div>
+    </section>
+    <section class="playground-section lab-workspace" id="playground" aria-labelledby="lab-workspace-title">
+      <div class="wrap">
+        <div class="lab-workspace-heading reveal"><div><p class="eyebrow">Choose your question</p><h2 id="lab-workspace-title">Your own <em>point of view.</em></h2></div><p>Explore the output.<br><span>Follow the evidence into a case study.</span></p></div>
+        <div class="lab">
+          <div class="lab-topline"><span><span class="small-dot" aria-hidden="true"></span> <span id="lab-current-project">Preparing the experiment</span></span><span>Interactive workspace <span aria-hidden="true">↙</span></span></div>
+          <div class="lab-tabs" role="tablist" aria-label="Choose an interactive output">
+            <button type="button" role="tab" id="tab-fraud" aria-selected="true" aria-controls="lab-panel" data-demo="fraud" tabindex="0">Fraud review</button>
+            <button type="button" role="tab" id="tab-churn" aria-selected="false" aria-controls="lab-panel" data-demo="churn" tabindex="-1">Employee churn</button>
+            <button type="button" role="tab" id="tab-sentiment" aria-selected="false" aria-controls="lab-panel" data-demo="sentiment" tabindex="-1">Sentiment analysis</button>
+            <button type="button" role="tab" id="tab-ctr" aria-selected="false" aria-controls="lab-panel" data-demo="ctr" tabindex="-1">Click-through ranking</button>
+            <button type="button" role="tab" id="tab-agoda" aria-selected="false" aria-controls="lab-panel" data-demo="agoda" tabindex="-1">Booking patterns</button>
+            <button type="button" role="tab" id="tab-talent" aria-selected="false" aria-controls="lab-panel" data-demo="talent" tabindex="-1">Talent Radar</button>
+            <button type="button" role="tab" id="tab-playerpulse" aria-selected="false" aria-controls="lab-panel" data-demo="playerpulse" tabindex="-1">PlayerPulse</button>
+            <button type="button" role="tab" id="tab-watch" aria-selected="false" aria-controls="lab-panel" data-demo="watch" tabindex="-1">Watch Atlas <span aria-hidden="true">↗</span></button>
+            <button type="button" role="tab" id="tab-country" aria-selected="false" aria-controls="lab-panel" data-demo="country" tabindex="-1">Country Map <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="lab-panel" id="lab-panel" role="tabpanel" aria-labelledby="tab-fraud" tabindex="0" aria-busy="true"><p class="loading-note">Preparing the interactive output…</p></div>
+        </div>
+        <p class="lab-footnote"><span aria-hidden="true">↳</span> Benchmark controls recalculate recorded evidence in your browser. Public apps load when you choose.</p>
+        <noscript><p>Enable JavaScript to use the controls, or <a href="index.html#projects">explore the project case studies</a>.</p></noscript>
+      </div>
+    </section>
+    <section class="lab-reading wrap reveal" aria-labelledby="lab-reading-title">
+      <div><p class="eyebrow">The details matter</p><h2 id="lab-reading-title">A result is only as useful<br>as <em>its context.</em></h2><p>Every project carries its data source, the method behind it, and the limits of what it can tell you.</p></div>
+      <div class="lab-reading-notes">
+        <details open><summary><span>01</span> Recorded benchmarks <span class="details-sign" aria-hidden="true">+</span></summary><p>Fraud, churn, sentiment and click-through ranking use exported results from reviewed repository revisions. Changing a control explores those results. Saved model examples keep their original inputs and recorded scores.</p></details>
+        <details><summary><span>02</span> Illustrative datasets <span class="details-sign" aria-hidden="true">+</span></summary><p>Booking patterns use 1,000 deterministic synthetic records. Talent Radar uses fictional companies and jobs. Both are labelled in the workspace so you can explore the approach with the right context.</p></details>
+        <details><summary><span>03</span> Original experiences <span class="details-sign" aria-hidden="true">+</span></summary><p>Watch Atlas and Country Memory Map open the original public applications on request. PlayerPulse uses a saved player archive; the comparison shows missing coverage rather than filling gaps with invented values.</p></details>
+      </div>
+    </section>
+    <div class="lab-next wrap"><p>A little more context?</p><a class="button button-lime magnetic" href="index.html#projects">Explore the case studies <span aria-hidden="true">↗</span></a><a class="text-link" href="index.html#resume">Meet the person behind the work <span aria-hidden="true">↗</span></a></div>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="index.html">arunabho<span class="brand-dot">.</span></a><a href="mailto:arunabhosom@gmail.com">arunabhosom@gmail.com</a><span>© <span id="year">2026</span> Arunabho Kanti Som</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+{
+  "model": "logistic_regression",
+  "source_commit": "afd8a8ddc1e1d3dcb5e2900dd22c50dccde3fb5d",
+  "model_sha256": "4075b418f55ea619baf349dcb3d12887fe44665c977978830850dd45acfe242f",
+  "input_sha256": "a31e7ed1237d1d78ae0556e986b583360effdf2c8b5d67a009410be82ec73043",
+  "test_rows": 7984,
+  "metrics": {
+    "model": "logistic_regression",
+    "split": "test",
+    "average_precision": 0.2850395056791992,
+    "roc_auc": 0.6439602248992271,
+    "log_loss": 0.4410798854021439,
+    "brier_score": 0.1374806486944664,
+    "accuracy": 0.6342685370741483,
+    "precision": 0.25314820794317083,
+    "recall": 0.5636232925952552,
+    "f1": 0.3493761140819964,
+    "threshold": 0.18113232691012277,
+    "tn": 4280,
+    "fp": 2313,
+    "fn": 607,
+    "tp": 784,
+    "alerts": 3097,
+    "positive_rate": 0.17422344689378758,
+    "rows": 7984
+  },
+  "caption": "The gains curve describes the sampled test set. The top-10% point has 799 contexts and captures 269 click labels; it is not a population CTR estimate.",
+  "limitation": "The benchmark has downsampled negatives and no representative campaign timelines or population click rate.",
+  "ranking": [
+    {
+      "selection_fraction": 0.01,
+      "rows": 80.0,
+      "positives_captured": 49.0,
+      "positive_capture_fraction": 0.03522646,
+      "observed_rate": 0.6125,
+      "lift": 3.51560029
+    },
+    {
+      "selection_fraction": 0.05,
+      "rows": 400.0,
+      "positives_captured": 161.0,
+      "positive_capture_fraction": 0.11574407,
+      "observed_rate": 0.4025,
+      "lift": 2.31025162
+    },
+    {
+      "selection_fraction": 0.1,
+      "rows": 799.0,
+      "positives_captured": 269.0,
+      "positive_capture_fraction": 0.19338605,
+      "observed_rate": 0.33667084,
+      "lift": 1.93240832
+    },
+    {
+      "selection_fraction": 0.2,
+      "rows": 1597.0,
+      "positives_captured": 440.0,
+      "positive_capture_fraction": 0.31631919,
+      "observed_rate": 0.27551659,
+      "lift": 1.5813979
+    },
+    {
+      "selection_fraction": 0.5,
+      "rows": 3992.0,
+      "positives_captured": 937.0,
+      "positive_capture_fraction": 0.6736161,
+      "observed_rate": 0.23471944,
+      "lift": 1.34723221
+    },
+    {
+      "selection_fraction": 1.0,
+      "rows": 7984.0,
+      "positives_captured": 1391.0,
+      "positive_capture_fraction": 1.0,
+      "observed_rate": 0.17422345,
+      "lift": 1.0
+    }
+  ],
+  "examples": [
+    {
+      "id": "ctr-1",
+      "title": "Benchmark ad context A",
+      "features": {
+        "ad_id": "8343295",
+        "advertiser_id": "11700",
+        "query_id": "7702266",
+        "keyword_id": "21264",
+        "title_id": "27892",
+        "description_id": "1559",
+        "depth": 3,
+        "position": 3
+      },
+      "saved": {
+        "example_id": "ctr-1",
+        "scores": {
+          "negative": 0.9307413207378201,
+          "positive": 0.06925867926217982
+        },
+        "score": 0.06925867926217982,
+        "threshold": 0.18113232691012277,
+        "flagged": false
+      }
+    },
+    {
+      "id": "ctr-2",
+      "title": "Benchmark ad context B",
+      "features": {
+        "ad_id": "20017077",
+        "advertiser_id": "23798",
+        "query_id": "93079",
+        "keyword_id": "35498",
+        "title_id": "4",
+        "description_id": "36476",
+        "depth": 1,
+        "position": 1
+      },
+      "saved": {
+        "example_id": "ctr-2",
+        "scores": {
+          "negative": 0.8074349862945879,
+          "positive": 0.19256501370541215
+        },
+        "score": 0.19256501370541215,
+        "threshold": 0.18113232691012277,
+        "flagged": true
+      }
+    },
+    {
+      "id": "ctr-3",
+      "title": "Benchmark ad context C",
+      "features": {
+        "ad_id": "21348354",
+        "advertiser_id": "36654",
+        "query_id": "10981",
+        "keyword_id": "19975",
+        "title_id": "36105",
+        "description_id": "33292",
+        "depth": 1,
+        "position": 1
+      },
+      "saved": {
+        "example_id": "ctr-3",
+        "scores": {
+          "negative": 0.8336639768092113,
+          "positive": 0.16633602319078872
+        },
+        "score": 0.16633602319078872,
+        "threshold": 0.18113232691012277,
+        "flagged": false
+      }
+    }
+  ],
+  "capturedOn": "2026-09-30",
+  "sourceUrl": "https://github.com/AarunabhS/Click-Through-Rate",
+  "sourcePath": "results/phase2"
+}

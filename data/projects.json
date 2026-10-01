@@ -1,0 +1,540 @@
+{
+  "capturedOn": "2026-09-30",
+  "projects": [
+    {
+      "id": "watch",
+      "title": "Watch Atlas",
+      "repo": "watch-atlas",
+      "category": "interactive",
+      "eyebrow": "A study in time",
+      "description": "Explore 1,629 wristwatch references through case sizes, movements, gemstones and collection patterns.",
+      "tags": [
+        "Data storytelling",
+        "Interactive catalog",
+        "JavaScript"
+      ],
+      "metric": "1,629",
+      "metricLabel": "watch references",
+      "liveUrl": "https://www.arunabhosom.com/watch-atlas/",
+      "demo": "watch",
+      "change": "Searchable collection insights now connect chart selections to matching watch references.",
+      "pipeline": [
+        "Prepare seven source tables",
+        "Normalize brand and reference",
+        "Explore five watchmakers"
+      ],
+      "limitation": "The catalog is an archival 2023–2024 snapshot. Segment labels are inferred; specifications and prices are not live market data.",
+      "images": [
+        {
+          "src": "images/outputs/watch-atlas.png",
+          "preview": "images/outputs/previews/watch-atlas.webp",
+          "alt": "The watch collection overview",
+          "caption": "Captured from the public app",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "src": "images/outputs/watch-insights.png",
+          "preview": "images/outputs/previews/watch-insights.webp",
+          "alt": "Compare catalog mix, case sizes and movement families",
+          "caption": "2023–2024 collection snapshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "snapshotCommit": "d3de8def9b1b50bd23ea8844fa999f90a0aae8b7",
+      "snapshotDate": "2026-09-30T03:25:28+05:30",
+      "snapshotMessage": "Document live GitHub Pages dashboard",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": false,
+      "sourceUrl": "https://github.com/AarunabhS/watch-atlas",
+      "caseStudyUrl": "case-study.html?project=watch"
+    },
+    {
+      "id": "playerpulse",
+      "title": "PlayerPulse",
+      "repo": "PlayerPulse-soccer-comparison-dashboard",
+      "category": "interactive",
+      "eyebrow": "The beautiful game, in numbers",
+      "description": "Compare footballers at the same age, explore per-90 metrics, and inspect World Cup match coverage.",
+      "tags": [
+        "React",
+        "Sports analytics",
+        "Data pipelines"
+      ],
+      "metric": "Per 90",
+      "metricLabel": "player comparisons",
+      "private": true,
+      "demo": "playerpulse",
+      "change": "The local project includes an age-based comparison workspace, World Cup views and a permission-gated match-log pipeline.",
+      "pipeline": [
+        "Prepare player and match sources",
+        "Align age and metric coverage",
+        "Compare like-for-like records"
+      ],
+      "limitation": "Captured from the local working tree. Data coverage differs by player, season and source. The source repository is private; no public live deployment was verified.",
+      "images": [
+        {
+          "src": "images/outputs/playerpulse-compare.png",
+          "preview": "images/outputs/previews/playerpulse-compare.webp",
+          "alt": "Age-based player comparison workspace",
+          "caption": "Local project capture",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "src": "images/outputs/playerpulse-metrics.png",
+          "preview": "images/outputs/previews/playerpulse-metrics.webp",
+          "alt": "Recorded player statistics compared at the same age",
+          "caption": "Local project capture · coverage varies by metric",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "src": "images/outputs/playerpulse-worldcup.png",
+          "preview": "images/outputs/previews/playerpulse-worldcup.webp",
+          "alt": "World Cup data center",
+          "caption": "Local project capture",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "snapshotCommit": "27bb729b114f6204be8a42920e0919474236fcf5",
+      "snapshotDate": "2026-08-02T10:40:44+05:30",
+      "snapshotMessage": "updates",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": true,
+      "sourceUrl": "https://github.com/AarunabhS/PlayerPulse-soccer-comparison-dashboard",
+      "caseStudyUrl": "case-study.html?project=playerpulse"
+    },
+    {
+      "id": "intelligence",
+      "title": "Competitive Intelligence",
+      "repo": "Threat_scoring_app",
+      "category": "ai",
+      "eyebrow": "From scattered signals to context",
+      "description": "Bring hiring, technology shifts and company signals into one research workspace with an explainable view of the evidence.",
+      "tags": [
+        "React + FastAPI",
+        "PostgreSQL",
+        "n8n"
+      ],
+      "metric": "3",
+      "metricLabel": "new intelligence modules",
+      "demo": "talent",
+      "change": "Insight Engine, Talent Radar and Scraper Lab join scoring services and automated n8n workflows.",
+      "pipeline": [
+        "Collect company signals",
+        "Aggregate and score evidence",
+        "Explore trends and hiring"
+      ],
+      "limitation": "UI screenshots use clearly labelled fictional API fixtures. The public walkthrough uses synthetic jobs. Production data requires the project’s backend and database.",
+      "images": [
+        {
+          "src": "images/outputs/threat-insight-engine.png",
+          "preview": "images/outputs/previews/threat-insight-engine.webp",
+          "alt": "Insight Engine: filters, company profile and signals",
+          "caption": "Original interface · fictional sample data",
+          "width": 1440,
+          "height": 1080
+        },
+        {
+          "src": "images/outputs/threat-talent-radar.png",
+          "preview": "images/outputs/previews/threat-talent-radar.webp",
+          "alt": "Talent Radar: hiring markets and capability lanes",
+          "caption": "Original interface · fictional sample jobs",
+          "width": 1440,
+          "height": 1080
+        },
+        {
+          "src": "images/outputs/threat-competitive-profile.png",
+          "preview": "images/outputs/previews/threat-competitive-profile.webp",
+          "alt": "Competitive Profile: compare company signals",
+          "caption": "Original interface · fictional sample data",
+          "width": 1440,
+          "height": 1080
+        }
+      ],
+      "snapshotCommit": "9f5fabc3f630bf35bfd9d6ded668d27db9aa009b",
+      "snapshotDate": "2026-09-30T01:28:55+05:30",
+      "snapshotMessage": "Add Insight Engine, Talent Radar, Scraper Lab, backend services, and n8n workflows",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": false,
+      "sourceUrl": "https://github.com/AarunabhS/Threat_scoring_app",
+      "caseStudyUrl": "case-study.html?project=intelligence"
+    },
+    {
+      "id": "country",
+      "title": "Country Memory Map",
+      "repo": "country-memory-map",
+      "category": "interactive",
+      "eyebrow": "A little curiosity goes a long way",
+      "description": "Learn countries, capitals and flags through a responsive map, solo challenges and multiplayer rooms.",
+      "tags": [
+        "Interactive maps",
+        "Game systems",
+        "JavaScript"
+      ],
+      "metric": "195",
+      "metricLabel": "countries to discover",
+      "liveUrl": "https://www.arunabhosom.com/country-memory-map/",
+      "demo": "country",
+      "change": "One geography arcade brings map exploration, country and capital challenges, flag games and private multiplayer rooms together.",
+      "pipeline": [
+        "Share one country model",
+        "Apply game and scoring rules",
+        "Play, explore and practise"
+      ],
+      "limitation": "Optional voice input depends on browser support. Multiplayer requires the public room service; solo play and map exploration are available separately.",
+      "images": [
+        {
+          "src": "images/outputs/country-memory-map.png",
+          "preview": "images/outputs/previews/country-memory-map.webp",
+          "alt": "The geography arcade home",
+          "caption": "Captured from the public app",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "src": "images/outputs/country-explore.png",
+          "preview": "images/outputs/previews/country-explore.webp",
+          "alt": "Country and capital recognition on the world map",
+          "caption": "Captured from the public app",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "snapshotCommit": "163e5ff5ab349dc65ea40e36601d0af1a51e0a69",
+      "snapshotDate": "2026-09-30T02:05:39+05:30",
+      "snapshotMessage": "security patches",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": false,
+      "sourceUrl": "https://github.com/AarunabhS/country-memory-map",
+      "caseStudyUrl": "case-study.html?project=country"
+    },
+    {
+      "id": "fraud",
+      "title": "Credit Card Fraud Detection",
+      "repo": "Credit-Card-Fraud-Detection",
+      "category": "ai",
+      "eyebrow": "Make the trade-off visible",
+      "description": "Detect rare fraud while showing how investigation capacity changes captured fraud and false alerts.",
+      "tags": [
+        "Calibrated ML",
+        "Chronological holdout",
+        "Python"
+      ],
+      "metric": "0.7882",
+      "metricLabel": "test average precision",
+      "demo": "fraud",
+      "report": "results/phase2/REPORT.md",
+      "change": "The full benchmark now includes independent calibration, uncertainty intervals, stability checks and frozen review policies. A new results gallery brings the key charts together in one visual summary.",
+      "pipeline": [
+        "Deduplicate public transactions",
+        "Calibrate on a separate reserve",
+        "Evaluate later held-out records"
+      ],
+      "limitation": "A retrospective, anonymized benchmark spanning two days. Recorded precision is 90.2% and recall 74.3% at the validation-selected threshold; these are not production guarantees.",
+      "images": [
+        {
+          "src": "images/outputs/fraud-overview.png",
+          "preview": "images/outputs/previews/fraud-overview.webp",
+          "alt": "Fraud precision, review capacity and score separation",
+          "caption": "Published project summary · retrospective benchmark",
+          "width": 3740,
+          "height": 2970
+        },
+        {
+          "src": "images/outputs/fraud-ranking.png",
+          "preview": "images/outputs/previews/fraud-ranking.webp",
+          "alt": "Fraud capture versus investigation budget",
+          "caption": "Published phase-two benchmark output",
+          "width": 990,
+          "height": 645
+        },
+        {
+          "src": "images/outputs/fraud-reliability.png",
+          "preview": "images/outputs/previews/fraud-reliability.webp",
+          "alt": "Calibration reliability and bin support",
+          "caption": "Published phase-two benchmark output",
+          "width": 1650,
+          "height": 615
+        },
+        {
+          "src": "images/outputs/fraud-demo.png",
+          "preview": "images/outputs/previews/fraud-demo.webp",
+          "alt": "Fraud Operations Lab: scoring examples and review policies",
+          "caption": "Captured from the local project demo",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "snapshotCommit": "30b609c2b3e7636ebcb8ad368db425d940e6f88c",
+      "snapshotDate": "2026-09-30T16:57:23+05:30",
+      "snapshotMessage": "Add colorful result charts, summary sheets, and reproducible gallery",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": false,
+      "sourceUrl": "https://github.com/AarunabhS/Credit-Card-Fraud-Detection",
+      "caseStudyUrl": "case-study.html?project=fraud"
+    },
+    {
+      "id": "churn",
+      "title": "Predictive Employee Churn",
+      "repo": "Predictive-Employee-Churn",
+      "category": "ai",
+      "eyebrow": "Predictions with an evidence trail",
+      "description": "Evaluate employee departure classification with calibrated probabilities, uncertainty and auditable error patterns.",
+      "tags": [
+        "Random Forest",
+        "Calibration",
+        "Error analysis"
+      ],
+      "metric": "0.9593",
+      "metricLabel": "test average precision",
+      "demo": "churn",
+      "report": "results/phase2/REPORT.md",
+      "change": "Independent calibration, error audits and development-only stability checks make the benchmark’s strengths and limits visible. A new results gallery brings the key charts together in one visual summary.",
+      "pipeline": [
+        "Deduplicate the HR benchmark",
+        "Isolate fit and calibration",
+        "Audit held-out errors"
+      ],
+      "limitation": "This public teaching benchmark has no dated employee observations or defined prediction horizon. Recorded associations are not causal explanations or grounds for individual employment decisions.",
+      "images": [
+        {
+          "src": "images/outputs/churn-overview.png",
+          "preview": "images/outputs/previews/churn-overview.webp",
+          "alt": "Model signals, department uncertainty and calibration",
+          "caption": "Published project summary · retrospective benchmark",
+          "width": 3740,
+          "height": 2970
+        },
+        {
+          "src": "images/outputs/churn-reliability.png",
+          "preview": "images/outputs/previews/churn-reliability.webp",
+          "alt": "Employee churn calibration and sample support",
+          "caption": "Published phase-two benchmark output",
+          "width": 1650,
+          "height": 615
+        },
+        {
+          "src": "images/outputs/churn-ranking.png",
+          "preview": "images/outputs/previews/churn-ranking.webp",
+          "alt": "Departure capture across review budgets",
+          "caption": "Published phase-two benchmark output",
+          "width": 990,
+          "height": 645
+        }
+      ],
+      "snapshotCommit": "72c987270aebe94e919e535a347784ba7fb0531e",
+      "snapshotDate": "2026-09-30T16:57:24+05:30",
+      "snapshotMessage": "Add colorful result charts, summary sheets, and reproducible gallery",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": false,
+      "sourceUrl": "https://github.com/AarunabhS/Predictive-Employee-Churn",
+      "caseStudyUrl": "case-study.html?project=churn"
+    },
+    {
+      "id": "agoda",
+      "title": "Agoda Booking Analysis",
+      "repo": "Agoda-Booking-Analysis",
+      "category": "analytics",
+      "eyebrow": "Understand when people book",
+      "description": "Explore booking lead times, daily rates and accommodation patterns across five cities with a reproducible analysis.",
+      "tags": [
+        "Python",
+        "Pandas",
+        "Data validation"
+      ],
+      "metric": "6",
+      "metricLabel": "reproducible chart outputs",
+      "demo": "agoda",
+      "change": "A shared notebook and CLI workflow now validates inputs, reports excluded rows and produces six charts with CSV summaries.",
+      "pipeline": [
+        "Validate booking fields",
+        "Summarize nonoverlapping groups",
+        "Explore counts and booked rates"
+      ],
+      "limitation": "The original workbook is absent. Portfolio charts and filters use 1,000 deterministic synthetic bookings, not Agoda business findings or a price forecast.",
+      "images": [
+        {
+          "src": "images/outputs/agoda-cities.png",
+          "preview": "images/outputs/previews/agoda-cities.webp",
+          "alt": "Booking counts and average rates by city",
+          "caption": "Original analysis output · synthetic demo",
+          "width": 1800,
+          "height": 600
+        },
+        {
+          "src": "images/outputs/agoda-lead_time.png",
+          "preview": "images/outputs/previews/agoda-lead_time.webp",
+          "alt": "Nonoverlapping booking lead-time intervals",
+          "caption": "Original analysis output · synthetic demo",
+          "width": 1800,
+          "height": 600
+        },
+        {
+          "src": "images/outputs/agoda-daily_trends.png",
+          "preview": "images/outputs/previews/agoda-daily_trends.webp",
+          "alt": "Daily booking and booked-rate trends",
+          "caption": "Original analysis output · synthetic demo",
+          "width": 1650,
+          "height": 1050
+        }
+      ],
+      "snapshotCommit": "ba2ce45843a41fea994534e2ac99586aa4051e84",
+      "snapshotDate": "2026-09-30T01:45:45+05:30",
+      "snapshotMessage": "Make booking analysis reproducible with validated inputs and demo workflow",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": false,
+      "sourceUrl": "https://github.com/AarunabhS/Agoda-Booking-Analysis",
+      "caseStudyUrl": "case-study.html?project=agoda"
+    },
+    {
+      "id": "sentiment",
+      "title": "Social Sentiment Analysis",
+      "repo": "SentimentAnalysis",
+      "category": "ai",
+      "eyebrow": "Listening beyond the label",
+      "description": "Evaluate three-class sentiment against human labels, inspect confusion patterns, and compare the selected model with a transparent baseline.",
+      "tags": [
+        "NLP",
+        "TF-IDF",
+        "Error analysis"
+      ],
+      "metric": "0.5587",
+      "metricLabel": "test macro F1",
+      "demo": "sentiment",
+      "report": "results/phase2/REPORT.md",
+      "change": "The evaluation includes independent calibration, uncertainty intervals, development-only stability checks and an auditable error analysis. A reproducible results gallery presents the evidence visually.",
+      "pipeline": [
+        "Clean development overlap",
+        "Select on validation macro F1",
+        "Inspect official test errors"
+      ],
+      "limitation": "Historical social posts; no measurement of Black Friday public opinion or current customer sentiment. A separately labelled, representative sample from the intended customer channel would be needed to validate a feedback workflow.",
+      "images": [
+        {
+          "src": "images/outputs/sentiment-overview.png",
+          "preview": "images/outputs/previews/sentiment-overview.webp",
+          "alt": "Social Sentiment Analysis — benchmark results overview",
+          "caption": "Published project summary · historical benchmark",
+          "width": 3740,
+          "height": 2970
+        },
+        {
+          "src": "images/outputs/sentiment-confusion.png",
+          "preview": "images/outputs/previews/sentiment-confusion.webp",
+          "alt": "Where the labels get confused",
+          "caption": "The confusion matrix includes all 12,284 official test posts. Model selection uses validation; a higher-scoring test candidate does not replace the selected model.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/sentiment-classes.png",
+          "preview": "images/outputs/previews/sentiment-classes.webp",
+          "alt": "Class support and recall",
+          "caption": "Recall and support are measured against the human-labelled official test set. Intervals describe benchmark uncertainty, not future customer channels.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/sentiment-models.png",
+          "preview": "images/outputs/previews/sentiment-models.webp",
+          "alt": "Model comparison",
+          "caption": "Candidates are shown for inspection. The selected TF-IDF model remains fixed from validation macro F1 even if another candidate has a higher test score.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/sentiment-reliability.png",
+          "preview": "images/outputs/previews/sentiment-reliability.webp",
+          "alt": "Score reliability and support by probability band",
+          "caption": "Published phase-two output · benchmark probabilities",
+          "width": 1650,
+          "height": 615
+        }
+      ],
+      "snapshotCommit": "c182c4f20f51f6af19c3983e95f788c4c91bdad6",
+      "snapshotDate": "2026-09-30T16:57:23+05:30",
+      "snapshotMessage": "Add colorful result charts, summary sheets, and reproducible gallery",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": false,
+      "sourceUrl": "https://github.com/AarunabhS/SentimentAnalysis",
+      "caseStudyUrl": "case-study.html?project=sentiment"
+    },
+    {
+      "id": "ctr",
+      "title": "Click Propensity & Ranking",
+      "repo": "Click-Through-Rate",
+      "category": "ai",
+      "eyebrow": "Put attention where the signal is",
+      "description": "Explore how a ranking model concentrates observed click labels, with probability calibration and the sampling limits kept in view.",
+      "tags": [
+        "Logistic regression",
+        "Group isolation",
+        "Ranking analytics"
+      ],
+      "metric": "1.93×",
+      "metricLabel": "top-10% benchmark enrichment",
+      "demo": "ctr",
+      "report": "results/phase2/REPORT.md",
+      "change": "The evaluation includes independent calibration, uncertainty intervals, development-only stability checks and an auditable error analysis. A reproducible results gallery presents the evidence visually.",
+      "pipeline": [
+        "Keep user groups disjoint",
+        "Calibrate and select on validation",
+        "Evaluate held-out ranking"
+      ],
+      "limitation": "The benchmark has downsampled negatives and no representative campaign timelines or population click rate. Representative impression logs, timestamps and an independent campaign evaluation would be needed before interpreting scores as real campaign probabilities.",
+      "images": [
+        {
+          "src": "images/outputs/ctr-overview.png",
+          "preview": "images/outputs/previews/ctr-overview.webp",
+          "alt": "Click Propensity & Ranking — benchmark results overview",
+          "caption": "Published project summary · historical benchmark",
+          "width": 3740,
+          "height": 2970
+        },
+        {
+          "src": "images/outputs/ctr-gains.png",
+          "preview": "images/outputs/previews/ctr-gains.webp",
+          "alt": "Ranking gains",
+          "caption": "The gains curve describes the sampled test set. The top-10% point has 799 contexts and captures 269 click labels; it is not a population CTR estimate.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/ctr-model-loss.png",
+          "preview": "images/outputs/previews/ctr-model-loss.webp",
+          "alt": "Model and baseline loss",
+          "caption": "Model and prior-baseline losses are measured on the same group-isolated test partition. Lower log loss is better; this does not restore population prevalence.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/ctr-position-errors.png",
+          "preview": "images/outputs/previews/ctr-position-errors.webp",
+          "alt": "Position error patterns",
+          "caption": "Position groups describe test-set error patterns. Moving an ad to another position is a hypothetical model change, not a measured causal effect.",
+          "width": 2750,
+          "height": 1716
+        },
+        {
+          "src": "images/outputs/ctr-reliability.png",
+          "preview": "images/outputs/previews/ctr-reliability.webp",
+          "alt": "Score reliability and support by probability band",
+          "caption": "Published phase-two output · benchmark probabilities",
+          "width": 1650,
+          "height": 615
+        }
+      ],
+      "snapshotCommit": "afd8a8ddc1e1d3dcb5e2900dd22c50dccde3fb5d",
+      "snapshotDate": "2026-09-30T16:57:24+05:30",
+      "snapshotMessage": "Add colorful result charts, summary sheets, and reproducible gallery",
+      "capturedOn": "2026-09-30",
+      "workingTreeChanges": false,
+      "sourceUrl": "https://github.com/AarunabhS/Click-Through-Rate",
+      "caseStudyUrl": "case-study.html?project=ctr"
+    }
+  ]
+}
